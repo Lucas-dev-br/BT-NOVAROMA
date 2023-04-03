@@ -53,6 +53,29 @@
     }
 }
 
+.auth-two-bg{
+    background-image: url("../../images/login/logoUniversity.jpg");
+        background-position: center;
+        background-size: cover;
+    
+    
+    
+        .shape {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 1;
+            pointer-events: none;
+    
+            >svg {
+                width: 100%;
+                height: auto;
+                fill: var(--#{$variable-prefix}body-bg);
+            }
+        }
+}
+
 // auth-pass-inputgroup
 
 .auth-pass-inputgroup{

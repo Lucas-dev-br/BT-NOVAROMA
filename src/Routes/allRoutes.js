@@ -16,7 +16,6 @@ import MailInbox from "../pages/EmailInbox";
 import BasicAction from "../pages/Email/EmailTemplates/BasicAction";
 import EcommerceAction from "../pages/Email/EmailTemplates/EcommerceAction";
 
-
 //CHat
 import Chat from "../pages/Chat";
 import Calendar from "../pages/Calendar";
@@ -32,12 +31,12 @@ import TaskList from "../pages/Tasks/TaskList";
 import KanbanBoard from "../pages/Tasks/KanbanBoard/Index";
 
 //Transactions
-import Transactions from '../pages/Crypto/Transactions';
-import BuySell from '../pages/Crypto/BuySell';
-import CryproOrder from '../pages/Crypto/CryptoOrder';
-import MyWallet from '../pages/Crypto/MyWallet';
-import ICOList from '../pages/Crypto/ICOList';
-import KYCVerification from '../pages/Crypto/KYCVerification';
+import Transactions from "../pages/Crypto/Transactions";
+import BuySell from "../pages/Crypto/BuySell";
+import CryproOrder from "../pages/Crypto/CryptoOrder";
+import MyWallet from "../pages/Crypto/MyWallet";
+import ICOList from "../pages/Crypto/ICOList";
+import KYCVerification from "../pages/Crypto/KYCVerification";
 
 //Crm Pages
 import CrmCompanies from "../pages/Crm/CrmCompanies";
@@ -51,8 +50,8 @@ import InvoiceCreate from "../pages/Invoices/InvoiceCreate";
 import InvoiceDetails from "../pages/Invoices/InvoiceDetails";
 
 // Support Tickets
-import ListView from '../pages/SupportTickets/ListView';
-import TicketsDetails from '../pages/SupportTickets/TicketsDetails';
+import ListView from "../pages/SupportTickets/ListView";
+import TicketsDetails from "../pages/SupportTickets/TicketsDetails";
 
 // //Ecommerce Pages
 import EcommerceProducts from "../pages/Ecommerce/EcommerceProducts/index";
@@ -112,7 +111,7 @@ import UiRatings from "../pages/AdvanceUi/UiRatings/UiRatings";
 import UiHighlight from "../pages/AdvanceUi/UiHighlight/UiHighlight";
 
 // Widgets
-import Widgets from '../pages/Widgets/Index';
+import Widgets from "../pages/Widgets/Index";
 
 //Forms
 import BasicElements from "../pages/Forms/BasicElements/BasicElements";
@@ -130,9 +129,9 @@ import FormAdvanced from "../pages/Forms/FormAdvanced/FormAdvanced";
 import Select2 from "../pages/Forms/Select2/Select2";
 
 //Tables
-import BasicTables from '../pages/Tables/BasicTables/BasicTables';
-import GridTables from '../pages/Tables/GridTables/GridTables';
-import ListTables from '../pages/Tables/ListTables/ListTables';
+import BasicTables from "../pages/Tables/BasicTables/BasicTables";
+import GridTables from "../pages/Tables/GridTables/GridTables";
+import ListTables from "../pages/Tables/ListTables/ListTables";
 import DataTables from "../pages/Tables/DataTables/DataTables";
 
 //Icon pages
@@ -148,45 +147,44 @@ import VectorMaps from "../pages/Maps/VectorMaps/VectorMaps";
 import LeafletMaps from "../pages/Maps/LeafletMaps/LeafletMaps";
 
 //AuthenticationInner pages
-import BasicSignIn from '../pages/AuthenticationInner/Login/BasicSignIn';
-import CoverSignIn from '../pages/AuthenticationInner/Login/CoverSignIn';
-import BasicSignUp from '../pages/AuthenticationInner/Register/BasicSignUp';
+import BasicSignIn from "../pages/AuthenticationInner/Login/BasicSignIn";
+import CoverSignIn from "../pages/AuthenticationInner/Login/CoverSignIn";
+import BasicSignUp from "../pages/AuthenticationInner/Register/BasicSignUp";
 import CoverSignUp from "../pages/AuthenticationInner/Register/CoverSignUp";
-import BasicPasswReset from '../pages/AuthenticationInner/PasswordReset/BasicPasswReset';
+import BasicPasswReset from "../pages/AuthenticationInner/PasswordReset/BasicPasswReset";
 //pages
-import Starter from '../pages/Pages/Starter/Starter';
-import SimplePage from '../pages/Pages/Profile/SimplePage/SimplePage';
-import Settings from '../pages/Pages/Profile/Settings/Settings';
-import Team from '../pages/Pages/Team/Team';
-import Timeline from '../pages/Pages/Timeline/Timeline';
-import Faqs from '../pages/Pages/Faqs/Faqs';
-import Pricing from '../pages/Pages/Pricing/Pricing';
-import Gallery from '../pages/Pages/Gallery/Gallery';
-import Maintenance from '../pages/Pages/Maintenance/Maintenance';
-import ComingSoon from '../pages/Pages/ComingSoon/ComingSoon';
-import SiteMap from '../pages/Pages/SiteMap/SiteMap';
-import SearchResults from '../pages/Pages/SearchResults/SearchResults';
+import Starter from "../pages/Pages/Starter/Starter";
+import SimplePage from "../pages/Pages/Profile/SimplePage/SimplePage";
+import Settings from "../pages/Pages/Profile/Settings/Settings";
+import Team from "../pages/Pages/Team/Team";
+import Timeline from "../pages/Pages/Timeline/Timeline";
+import Faqs from "../pages/Pages/Faqs/Faqs";
+import Pricing from "../pages/Pages/Pricing/Pricing";
+import Gallery from "../pages/Pages/Gallery/Gallery";
+import Maintenance from "../pages/Pages/Maintenance/Maintenance";
+import ComingSoon from "../pages/Pages/ComingSoon/ComingSoon";
+import SiteMap from "../pages/Pages/SiteMap/SiteMap";
+import SearchResults from "../pages/Pages/SearchResults/SearchResults";
 
-import CoverPasswReset from '../pages/AuthenticationInner/PasswordReset/CoverPasswReset';
-import BasicLockScreen from '../pages/AuthenticationInner/LockScreen/BasicLockScr';
-import CoverLockScreen from '../pages/AuthenticationInner/LockScreen/CoverLockScr';
-import BasicLogout from '../pages/AuthenticationInner/Logout/BasicLogout';
-import CoverLogout from '../pages/AuthenticationInner/Logout/CoverLogout';
-import BasicSuccessMsg from '../pages/AuthenticationInner/SuccessMessage/BasicSuccessMsg';
-import CoverSuccessMsg from '../pages/AuthenticationInner/SuccessMessage/CoverSuccessMsg';
-import BasicTwosVerify from '../pages/AuthenticationInner/TwoStepVerification/BasicTwosVerify';
-import CoverTwosVerify from '../pages/AuthenticationInner/TwoStepVerification/CoverTwosVerify';
-import Basic404 from '../pages/AuthenticationInner/Errors/Basic404';
-import Cover404 from '../pages/AuthenticationInner/Errors/Cover404';
-import Alt404 from '../pages/AuthenticationInner/Errors/Alt404';
-import Error500 from '../pages/AuthenticationInner/Errors/Error500';
+import CoverPasswReset from "../pages/AuthenticationInner/PasswordReset/CoverPasswReset";
+import BasicLockScreen from "../pages/AuthenticationInner/LockScreen/BasicLockScr";
+import CoverLockScreen from "../pages/AuthenticationInner/LockScreen/CoverLockScr";
+import BasicLogout from "../pages/AuthenticationInner/Logout/BasicLogout";
+import CoverLogout from "../pages/AuthenticationInner/Logout/CoverLogout";
+import BasicSuccessMsg from "../pages/AuthenticationInner/SuccessMessage/BasicSuccessMsg";
+import CoverSuccessMsg from "../pages/AuthenticationInner/SuccessMessage/CoverSuccessMsg";
+import BasicTwosVerify from "../pages/AuthenticationInner/TwoStepVerification/BasicTwosVerify";
+import CoverTwosVerify from "../pages/AuthenticationInner/TwoStepVerification/CoverTwosVerify";
+import Basic404 from "../pages/AuthenticationInner/Errors/Basic404";
+import Cover404 from "../pages/AuthenticationInner/Errors/Cover404";
+import Alt404 from "../pages/AuthenticationInner/Errors/Alt404";
+import Error500 from "../pages/AuthenticationInner/Errors/Error500";
 
 import BasicPasswCreate from "../pages/AuthenticationInner/PasswordCreate/BasicPasswCreate";
 import CoverPasswCreate from "../pages/AuthenticationInner/PasswordCreate/CoverPasswCreate";
 import Offlinepage from "../pages/AuthenticationInner/Errors/Offlinepage";
 
 //login
-import Login from "../pages/Authentication/Login";
 import ForgetPasswordPage from "../pages/Authentication/ForgetPassword";
 import Logout from "../pages/Authentication/Logout";
 import Register from "../pages/Authentication/Register";
@@ -219,6 +217,10 @@ import NFTLanding from "../pages/Landing/NFTLanding";
 // User Profile
 import UserProfile from "../pages/Authentication/user-profile";
 
+// Login universidade e estudante
+import LoginUniversity from "../pages/Authentication/LoginUniversity";
+import Login from "../pages/Authentication/Login";
+
 const authProtectedRoutes = [
   { path: "/dashboard-analytics", component: DashboardAnalytics },
   { path: "/dashboard-crm", component: DashboardCrm },
@@ -229,7 +231,10 @@ const authProtectedRoutes = [
   { path: "/dashboard-nft", component: DashboardNFT },
   { path: "/apps-calendar", component: Calendar },
   { path: "/apps-ecommerce-products", component: EcommerceProducts },
-  { path: "/apps-ecommerce-product-details", component: EcommerceProductDetail },
+  {
+    path: "/apps-ecommerce-product-details",
+    component: EcommerceProductDetail,
+  },
   { path: "/apps-ecommerce-add-product", component: EcommerceAddProduct },
   { path: "/apps-ecommerce-orders", component: EcommerceOrders },
   { path: "/apps-ecommerce-order-details", component: EcommerceOrderDetail },
@@ -310,7 +315,6 @@ const authProtectedRoutes = [
 
   { path: "/charts-chartjs", component: ChartsJs },
   { path: "/charts-echarts", component: Echarts },
-
 
   // Base Ui
   { path: "/ui-alerts", component: UiAlerts },
@@ -407,9 +411,13 @@ const authProtectedRoutes = [
 ];
 
 const publicRoutes = [
+  // Login estudante e insituição
+  { path: "/login/estudante", component: Login },
+  { path: "/login/instituição", component: LoginUniversity },
+
   // Authentication Page
+
   { path: "/logout", component: Logout },
-  { path: "/login", component: Login },
   { path: "/forgot-password", component: ForgetPasswordPage },
   { path: "/register", component: Register },
 
@@ -441,7 +449,6 @@ const publicRoutes = [
   { path: "/auth-pass-change-basic", component: BasicPasswCreate },
   { path: "/auth-pass-change-cover", component: CoverPasswCreate },
   { path: "/auth-offline", component: Offlinepage },
-
 ];
 
 export { authProtectedRoutes, publicRoutes };

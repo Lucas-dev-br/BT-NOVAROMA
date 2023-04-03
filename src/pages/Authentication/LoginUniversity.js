@@ -37,7 +37,7 @@ import logoLight from "../../assets/images/logo-light.png";
 import { facebook, google } from "../../config";
 
 // Components
-import AuthSlider from "../AuthenticationInner/authCarousel";
+import AuthSlider2 from "../AuthenticationInner/authCarousel2.js";
 
 // Images
 import logo from "../../assets/images/login/logo-login.png";
@@ -45,7 +45,7 @@ import studentImage from "../../assets/images/login/graduation-cap-line.svg";
 import universityImage from "../../assets/images/login/school-line.svg";
 import logoFabrica from "../../assets/images/login/logoFabrica.svg";
 
-const Login = (props) => {
+const LoginUniversity = (props) => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => ({
     user: state.Account.user,
@@ -333,7 +333,7 @@ const Login = (props) => {
             <Col lg={12}>
               <Card className="">
                 <Row className="g-0">
-                  <AuthSlider />
+                  <AuthSlider2 />
 
                   <Col lg={6}>
                     <div className="p-lg-5 p-4 ">
@@ -345,13 +345,13 @@ const Login = (props) => {
                         <form action="/">
                           <div className="mb-3">
                             <Label htmlFor="username" className="form-label">
-                              Matricula
+                              Usuario
                             </Label>
                             <Input
                               type="text"
                               className="form-control"
                               id="username"
-                              placeholder="Insira sua matricula"
+                              placeholder="Insira o usuario da insituição"
                               required
                             />
                           </div>
@@ -489,4 +489,4 @@ const Login = (props) => {
   );
 };
 
-export default withRouter(Login);
+export default withRouter(LoginUniversity);
