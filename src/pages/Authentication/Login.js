@@ -39,6 +39,9 @@ import AuthSlider from "../AuthenticationInner/authCarousel";
 
 // Images
 import logo from "../../assets/images/login/logo-login.png";
+import studentImage from "../../assets/images/login/graduation-cap-line.svg";
+import universityImage from "../../assets/images/login/school-line.svg";
+import logoFabrica from "../../assets/images/login/logoFabrica.svg";
 
 const Login = (props) => {
   const dispatch = useDispatch();
@@ -320,62 +323,47 @@ const Login = (props) => {
   document.title = "Banco de Estagio - Nova Roma";
   return (
     <React.Fragment>
-      <div className="auth-page-content overflow-hidden pt-lg-5">
+      <div className="auth-page-content pt-lg-5">
         <Container>
           <Row>
             <Col lg={12}>
-              <Card className="overflow-hidden">
+              <Card className="">
                 <Row className="g-0">
                   <AuthSlider />
 
                   <Col lg={6}>
-                    <div className="p-lg-5 p-4">
-                      <div>
-                        <img
-                          src={logo}
-                          className="d-flex justify-content-center"
-                        />
-
-                        <p className="text-muted text-center">
-                          Bem vindo ao Banco de estagio da Nova Roma!
-                        </p>
+                    <div className="p-lg-5 p-4 ">
+                      <div className="text-center">
+                        <img src={logo} />
                       </div>
 
                       <div className="mt-4">
                         <form action="/">
                           <div className="mb-3">
                             <Label htmlFor="username" className="form-label">
-                              Username
+                              Matricula
                             </Label>
                             <Input
                               type="text"
                               className="form-control"
                               id="username"
-                              placeholder="Enter username"
+                              placeholder="Insira sua matricula"
                               required
                             />
                           </div>
 
                           <div className="mb-3">
-                            <div className="float-end">
-                              <Link
-                                to="/auth-pass-reset-cover"
-                                className="text-muted"
-                              >
-                                Forgot password?
-                              </Link>
-                            </div>
                             <Label
                               className="form-label"
                               htmlFor="password-input"
                             >
-                              Password
+                              Senha
                             </Label>
                             <div className="position-relative auth-pass-inputgroup mb-3">
                               <Input
                                 type="password"
                                 className="form-control pe-5"
-                                placeholder="Enter password"
+                                placeholder="Bote sua senha"
                                 id="password-input"
                                 required
                               />
@@ -400,38 +388,46 @@ const Login = (props) => {
                               className="form-check-label"
                               htmlFor="auth-remember-check"
                             >
-                              Remember me
+                              Lembre de mim
                             </Label>
                           </div>
 
                           <div className="mt-4">
                             <Button
-                              color="success"
+                              style={{ backgroundColor: "#008f98" }}
                               className="w-100"
                               type="submit"
                             >
-                              Sign In
+                              Entrar
                             </Button>
                           </div>
 
                           <div className="mt-4 text-center">
                             <div className="signin-other-title">
-                              <h5 className="fs-13 mb-4 title">Sign In with</h5>
+                              <h5 className="fs-13 mb-4 title">Logar como </h5>
                             </div>
 
-                            <div>
-                              <Button color="primary" className="btn-icon me-1">
-                                <i className="ri-facebook-fill fs-16"></i>
-                              </Button>
-                              <Button color="danger" className="btn-icon me-1">
-                                <i className="ri-google-fill fs-16"></i>
-                              </Button>
-                              <Button color="dark" className="btn-icon me-1">
-                                <i className="ri-github-fill fs-16"></i>
-                              </Button>
-                              <Button color="info" className="btn-icon">
-                                <i className="ri-twitter-fill fs-16"></i>
-                              </Button>
+                            <div className="d-flex justify-content-center">
+                              <div>
+                                <Button
+                                  style={{ backgroundColor: "#0c2e61" }}
+                                  className="btn-icon me-1"
+                                >
+                                  <img
+                                    src={studentImage}
+                                    className=" fs-16"
+                                  ></img>
+                                </Button>
+                              </div>
+
+                              <div>
+                                <Button color="info" className="btn-icon">
+                                  <img
+                                    src={universityImage}
+                                    className=" fs-16"
+                                  ></img>
+                                </Button>
+                              </div>
                             </div>
                           </div>
                         </form>
@@ -439,13 +435,12 @@ const Login = (props) => {
 
                       <div className="mt-5 text-center">
                         <p className="mb-0">
-                          Don't have an account ?{" "}
+                          Esqueceu sua conta?{" "}
                           <a
                             href="/auth-signup-cover"
                             className="fw-semibold text-primary text-decoration-underline"
                           >
-                            {" "}
-                            Signup
+                            Clique aqui
                           </a>{" "}
                         </p>
                       </div>
@@ -463,9 +458,14 @@ const Login = (props) => {
           <Row>
             <Col lg={12}>
               <div className="text-center">
-                <p className="mb-0">
-                  &copy; {new Date().getFullYear()} Velzon. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger"></i> by Themesbrand
+                <p className="mb-0 fs-15">
+                  &copy; {new Date().getFullYear()} Desenvolvido e criado pela
+                  StageUp{" "}
+                  <img
+                    src={logoFabrica}
+                    className="fs-5"
+                    style={{ width: "50px" }}
+                  ></img>
                 </p>
               </div>
             </Col>

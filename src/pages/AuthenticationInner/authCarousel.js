@@ -12,7 +12,6 @@ const AuthSlider = () => {
     <React.Fragment>
       <Col lg={6}>
         <div className="p-lg-5 p-4 auth-one-bg h-100">
-          <div className="bg-overlay"></div>
           <div className="position-relative h-100 d-flex flex-column">
             <div className="mb-4">
               <Link to="/dashboard" className="d-block">
