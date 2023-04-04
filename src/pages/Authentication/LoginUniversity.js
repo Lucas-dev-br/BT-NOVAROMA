@@ -414,7 +414,7 @@ const LoginUniversity = (props) => {
                             <div className="d-flex justify-content-center">
                               <div>
                                 <Button
-                                  style={{ backgroundColor: "#0c2e61" }}
+                                  color="warning"
                                   className="btn-icon me-1"
                                   onClick={() =>
                                     history.push("/login/estudante")

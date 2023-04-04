@@ -151,14 +151,7 @@ const Login = (props) => {
   //                       <Alert color="danger"> {error} </Alert>
   //                     ) : null}
   //                     <div className="p-2 mt-4">
-  //                       <Form
-  //                         onSubmit={(e) => {
-  //                           e.preventDefault();
-  //                           validation.handleSubmit();
-  //                           return false;
-  //                         }}
-  //                         action="#"
-  //                       >
+
   //                         <div className="mb-3">
   //                           <Label htmlFor="email" className="form-label">
   //                             Email
@@ -199,27 +192,27 @@ const Login = (props) => {
   //                             Password
   //                           </Label>
   //                           <div className="position-relative auth-pass-inputgroup mb-3">
-  //                             <Input
-  //                               name="password"
-  //                               value={validation.values.password || ""}
-  //                               type="password"
-  //                               className="form-control pe-5"
-  //                               placeholder="Enter Password"
-  //                               onChange={validation.handleChange}
-  //                               onBlur={validation.handleBlur}
-  //                               invalid={
-  //                                 validation.touched.password &&
-  //                                 validation.errors.password
-  //                                   ? true
-  //                                   : false
-  //                               }
-  //                             />
-  //                             {validation.touched.password &&
-  //                             validation.errors.password ? (
-  //                               <FormFeedback type="invalid">
-  //                                 {validation.errors.password}
-  //                               </FormFeedback>
-  //                             ) : null}
+  // <Input
+  //   name="password"
+  //   value={validation.values.password || ""}
+  //   type="password"
+  //   className="form-control pe-5"
+  //   placeholder="Enter Password"
+  //   onChange={validation.handleChange}
+  //   onBlur={validation.handleBlur}
+  //   invalid={
+  //     validation.touched.password &&
+  //     validation.errors.password
+  //       ? true
+  //       : false
+  //   }
+  // />
+  // {validation.touched.password &&
+  // validation.errors.password ? (
+  //   <FormFeedback type="invalid">
+  //     {validation.errors.password}
+  //   </FormFeedback>
+  // ) : null}
   //                             <button
   //                               className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted"
   //                               type="button"
@@ -342,18 +335,42 @@ const Login = (props) => {
                       </div>
 
                       <div className="mt-4">
-                        <form action="/">
+                        {error && error ? (
+                          <Alert color="danger"> {error} </Alert>
+                        ) : null}
+                        <Form
+                          onSubmit={(e) => {
+                            e.preventDefault();
+                            validation.handleSubmit();
+                            return false;
+                          }}
+                          action="#"
+                        >
                           <div className="mb-3">
                             <Label htmlFor="username" className="form-label">
                               Matricula
                             </Label>
                             <Input
-                              type="text"
+                              name="email"
                               className="form-control"
-                              id="username"
-                              placeholder="Insira sua matricula"
-                              required
+                              placeholder="Entre com sua matricula"
+                              type="email"
+                              onChange={validation.handleChange}
+                              onBlur={validation.handleBlur}
+                              value={validation.values.email || ""}
+                              invalid={
+                                validation.touched.email &&
+                                validation.errors.email
+                                  ? true
+                                  : false
+                              }
                             />
+                            {validation.touched.email &&
+                            validation.errors.email ? (
+                              <FormFeedback type="invalid">
+                                {validation.errors.email}
+                              </FormFeedback>
+                            ) : null}
                           </div>
 
                           <div className="mb-3">
@@ -365,12 +382,26 @@ const Login = (props) => {
                             </Label>
                             <div className="position-relative auth-pass-inputgroup mb-3">
                               <Input
+                                name="password"
+                                value={validation.values.password || ""}
                                 type="password"
                                 className="form-control pe-5"
-                                placeholder="Bote sua senha"
-                                id="password-input"
-                                required
+                                placeholder="Enter Password"
+                                onChange={validation.handleChange}
+                                onBlur={validation.handleBlur}
+                                invalid={
+                                  validation.touched.password &&
+                                  validation.errors.password
+                                    ? true
+                                    : false
+                                }
                               />
+                              {validation.touched.password &&
+                              validation.errors.password ? (
+                                <FormFeedback type="invalid">
+                                  {validation.errors.password}
+                                </FormFeedback>
+                              ) : null}
                               <button
                                 className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted"
                                 type="button"
@@ -414,7 +445,7 @@ const Login = (props) => {
                             <div className="d-flex justify-content-center">
                               <div>
                                 <Button
-                                  style={{ backgroundColor: "#0c2e61" }}
+                                  color="warning"
                                   className="btn-icon me-1"
                                   onClick={() =>
                                     history.push("/login/estudante")
@@ -443,7 +474,7 @@ const Login = (props) => {
                               </div>
                             </div>
                           </div>
-                        </form>
+                        </Form>
                       </div>
 
                       <div className="mt-5 text-center">
