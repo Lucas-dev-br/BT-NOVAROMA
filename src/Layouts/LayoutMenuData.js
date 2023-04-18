@@ -131,8 +131,17 @@ const Navdata = () => {
 
     const menuItems = [
         {
-            label: "Menu",
             isHeader: true,
+        },
+        {
+            id: "vagas",
+            label: "vagas",
+            icon: "bx bxs-notepad",
+            link: "/vagas",
+            click: function (e) {
+                e.preventDefault();
+                setIscurrentState('Vagas');
+            }
         },
         {
             id: "dashboard",

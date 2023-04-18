@@ -342,17 +342,32 @@ const LoginUniversity = (props) => {
                       </div>
 
                       <div className="mt-4">
-                        <form action="/">
+                      <Form
+                          onSubmit={(e) => {
+                            e.preventDefault();
+                            validation.handleSubmit();
+                            return false;
+                          }}
+                          action="#"
+                        > 
                           <div className="mb-3">
                             <Label htmlFor="username" className="form-label">
                               Usuario
                             </Label>
                             <Input
-                              type="text"
+                              name="email"
                               className="form-control"
-                              id="username"
-                              placeholder="Insira o usuario da insituição"
-                              required
+                              placeholder="Enter email"
+                              type="email"
+                              onChange={validation.handleChange}
+                              onBlur={validation.handleBlur}
+                              value={validation.values.email || ""}
+                              invalid={
+                                validation.touched.email &&
+                                validation.errors.email
+                                  ? true
+                                  : false
+                              }
                             />
                           </div>
 
@@ -364,12 +379,20 @@ const LoginUniversity = (props) => {
                               Senha
                             </Label>
                             <div className="position-relative auth-pass-inputgroup mb-3">
-                              <Input
+                            <Input
+                                name="password"
+                                value={validation.values.password || ""}
                                 type="password"
                                 className="form-control pe-5"
-                                placeholder="Bote sua senha"
-                                id="password-input"
-                                required
+                                placeholder="Enter Password"
+                                onChange={validation.handleChange}
+                                onBlur={validation.handleBlur}
+                                invalid={
+                                  validation.touched.password &&
+                                  validation.errors.password
+                                    ? true
+                                    : false
+                                }
                               />
                               <button
                                 className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted"
@@ -414,7 +437,7 @@ const LoginUniversity = (props) => {
                             <div className="d-flex justify-content-center">
                               <div>
                                 <Button
-                                  style={{ backgroundColor: "#0c2e61" }}
+                                  color="warning"
                                   className="btn-icon me-1"
                                   onClick={() =>
                                     history.push("/login/estudante")
@@ -443,7 +466,7 @@ const LoginUniversity = (props) => {
                               </div>
                             </div>
                           </div>
-                        </form>
+                        </Form>
                       </div>
 
                       <div className="mt-5 text-center">

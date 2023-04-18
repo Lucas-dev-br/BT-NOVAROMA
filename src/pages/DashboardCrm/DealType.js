@@ -23,7 +23,7 @@ const DealType = () => {
                             </UncontrolledDropdown>
                         </div>
                     </div>
-                    <div lass="card-body pb-0">
+                    <div >
                         <div id="deal-type-charts" dir="ltr">
                             <DealTypeCharts dataColors='["--vz-warning", "--vz-danger", "--vz-success"]' />
                         </div>
