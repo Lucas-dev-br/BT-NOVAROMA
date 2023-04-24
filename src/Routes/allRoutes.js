@@ -1,6 +1,9 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 
+// Vagas
+import Vacancies from "../pages/Vecancies/VecanciesList"
+
 //Dashboard
 import DashboardAnalytics from "../pages/DashboardAnalytics";
 import DashboardCrm from "../pages/DashboardCrm";
@@ -222,9 +225,13 @@ import LoginUniversity from "../pages/Authentication/LoginUniversity";
 import Login from "../pages/Authentication/Login";
 
 const authProtectedRoutes = [
+
+  // Rotas de instituição
+  { path: "/vagas", component: DashboardEcommerce },
+  
+
   { path: "/dashboard-analytics", component: DashboardAnalytics },
   { path: "/dashboard-crm", component: DashboardCrm },
-  { path: "/dashboard", component: DashboardEcommerce },
   { path: "/index", component: DashboardEcommerce },
   { path: "/dashboard-crypto", component: DashboardCrypto },
   { path: "/dashboard-projects", component: DashboardProject },

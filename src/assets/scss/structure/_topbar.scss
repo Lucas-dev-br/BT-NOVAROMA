@@ -137,7 +137,7 @@
   
   .topbar-user {
     @media (min-width: 768px) {
-      background-color: $topbar-user-bg;
+      background-color: #000;
     }
   
     .dropdown-menu {
@@ -201,13 +201,13 @@
   
   [data-topbar="dark"] {
     #page-topbar {
-      background-color: $header-bg-dark;
-      border-color: $header-bg-dark;
+      background-color: #7BC0FF;
+      border-color: #7BC0FF;
     }
   
     .navbar-header {
       .btn-topbar {
-        color: $header-item-color-dark;
+        color: #000;
   
         &:hover,
         &:focus {
@@ -219,7 +219,7 @@
   
     .topbar-user {
       @media (min-width: 767.99px) {
-        background-color: $topbar-user-bg-dark;
+        background-color: #7BC0FF;
       }
   
       .user-name-text {
@@ -227,7 +227,7 @@
       }
   
       .user-name-sub-text {
-        color: $header-item-color-dark !important;
+        color: #3d3c3c !important;
       }
     }
   
@@ -241,19 +241,19 @@
   
     .app-search {
       .form-control {
-        background-color: rgba($white, 0.05);
-        color: $white;
+        background-color: rgba(#000, 0.05);
+        color: #000;
       }
   
       span.search-widget-icon,
       input.form-control::-webkit-input-placeholder {
-        color: rgba($white, 0.5);
+        color: rgba(#000, 0.5);
       }
     }
   
     .hamburger-icon {
       span {
-        background-color: $gray-300;
+        background-color: #000;
       }
     }
   }

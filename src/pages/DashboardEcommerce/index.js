@@ -11,7 +11,7 @@ import StoreVisits from "./StoreVisits";
 import TopSellers from "./TopSellers";
 
 const DashboardEcommerce = () => {
-  document.title="Dashboard | Velzon - React Admin & Dashboard Template";
+  document.title="Vagas de estagio";
   return (
     <React.Fragment>
       <div className="page-content">
@@ -19,27 +19,11 @@ const DashboardEcommerce = () => {
           <Row>
             <Col>
               <div className="h-100">
-                <Section />
                 <Row>
-                  <Widget />
-                </Row>
-                <Row>
-                  <Col xl={8}>
-                    <Revenue />
-                  </Col>
-                  <SalesByLocations />
-                </Row>
-                <Row>
-                  <BestSellingProducts />
-                  <TopSellers />
-                </Row>
-                <Row>
-                  <StoreVisits />
                   <RecentOrders />
                 </Row>
               </div>
             </Col>
-            <RecentActivity />
           </Row>
         </Container>
       </div>

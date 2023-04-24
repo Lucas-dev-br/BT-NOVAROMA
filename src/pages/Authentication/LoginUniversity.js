@@ -40,7 +40,7 @@ import { facebook, google } from "../../config";
 import AuthSlider2 from "../AuthenticationInner/authCarousel2.js";
 
 // Images
-import logo from "../../assets/images/login/logo-login.png";
+import logo from "../../assets/images/login/logo-login.jpeg";
 import studentImage from "../../assets/images/login/graduation-cap-line.svg";
 import universityImage from "../../assets/images/login/school-line.svg";
 import logoFabrica from "../../assets/images/login/logoFabrica.svg";

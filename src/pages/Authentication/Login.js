@@ -40,7 +40,7 @@ import { facebook, google } from "../../config";
 import AuthSlider from "../AuthenticationInner/authCarousel";
 
 // Images
-import logo from "../../assets/images/login/logo-login.png";
+import logo from "../../assets/images/login/logo-login.jpeg";
 import studentImage from "../../assets/images/login/graduation-cap-line.svg";
 import universityImage from "../../assets/images/login/school-line.svg";
 import logoFabrica from "../../assets/images/login/logoFabrica.svg";
@@ -151,14 +151,7 @@ const Login = (props) => {
   //                       <Alert color="danger"> {error} </Alert>
   //                     ) : null}
   //                     <div className="p-2 mt-4">
-  //                       <Form
-  //                         onSubmit={(e) => {
-  //                           e.preventDefault();
-  //                           validation.handleSubmit();
-  //                           return false;
-  //                         }}
-  //                         action="#"
-  //                       >
+
   //                         <div className="mb-3">
   //                           <Label htmlFor="email" className="form-label">
   //                             Email
@@ -199,27 +192,27 @@ const Login = (props) => {
   //                             Password
   //                           </Label>
   //                           <div className="position-relative auth-pass-inputgroup mb-3">
-  //                             <Input
-  //                               name="password"
-  //                               value={validation.values.password || ""}
-  //                               type="password"
-  //                               className="form-control pe-5"
-  //                               placeholder="Enter Password"
-  //                               onChange={validation.handleChange}
-  //                               onBlur={validation.handleBlur}
-  //                               invalid={
-  //                                 validation.touched.password &&
-  //                                 validation.errors.password
-  //                                   ? true
-  //                                   : false
-  //                               }
-  //                             />
-  //                             {validation.touched.password &&
-  //                             validation.errors.password ? (
-  //                               <FormFeedback type="invalid">
-  //                                 {validation.errors.password}
-  //                               </FormFeedback>
-  //                             ) : null}
+  // <Input
+  //   name="password"
+  //   value={validation.values.password || ""}
+  //   type="password"
+  //   className="form-control pe-5"
+  //   placeholder="Enter Password"
+  //   onChange={validation.handleChange}
+  //   onBlur={validation.handleBlur}
+  //   invalid={
+  //     validation.touched.password &&
+  //     validation.errors.password
+  //       ? true
+  //       : false
+  //   }
+  // />
+  // {validation.touched.password &&
+  // validation.errors.password ? (
+  //   <FormFeedback type="invalid">
+  //     {validation.errors.password}
+  //   </FormFeedback>
+  // ) : null}
   //                             <button
   //                               className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted"
   //                               type="button"
@@ -338,22 +331,47 @@ const Login = (props) => {
                   <Col lg={6}>
                     <div className="p-lg-5 p-4 ">
                       <div className="text-center">
-                        <img src={logo} />
+                        <img src={logo} width={150}/>
+                        
                       </div>
 
                       <div className="mt-4">
-                        <form action="/">
+                        {error && error ? (
+                          <Alert color="danger"> {error} </Alert>
+                        ) : null}
+                        <Form
+                          onSubmit={(e) => {
+                            e.preventDefault();
+                            validation.handleSubmit();
+                            return false;
+                          }}
+                          action="#"
+                        >
                           <div className="mb-3">
                             <Label htmlFor="username" className="form-label">
                               Matricula
                             </Label>
                             <Input
-                              type="text"
+                              name="email"
                               className="form-control"
-                              id="username"
-                              placeholder="Insira sua matricula"
-                              required
+                              placeholder="Entre com sua matricula"
+                              type="email"
+                              onChange={validation.handleChange}
+                              onBlur={validation.handleBlur}
+                              value={validation.values.email || ""}
+                              invalid={
+                                validation.touched.email &&
+                                validation.errors.email
+                                  ? true
+                                  : false
+                              }
                             />
+                            {validation.touched.email &&
+                            validation.errors.email ? (
+                              <FormFeedback type="invalid">
+                                {validation.errors.email}
+                              </FormFeedback>
+                            ) : null}
                           </div>
 
                           <div className="mb-3">
@@ -365,12 +383,26 @@ const Login = (props) => {
                             </Label>
                             <div className="position-relative auth-pass-inputgroup mb-3">
                               <Input
+                                name="password"
+                                value={validation.values.password || ""}
                                 type="password"
                                 className="form-control pe-5"
-                                placeholder="Bote sua senha"
-                                id="password-input"
-                                required
+                                placeholder="Enter Password"
+                                onChange={validation.handleChange}
+                                onBlur={validation.handleBlur}
+                                invalid={
+                                  validation.touched.password &&
+                                  validation.errors.password
+                                    ? true
+                                    : false
+                                }
                               />
+                              {validation.touched.password &&
+                              validation.errors.password ? (
+                                <FormFeedback type="invalid">
+                                  {validation.errors.password}
+                                </FormFeedback>
+                              ) : null}
                               <button
                                 className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted"
                                 type="button"
@@ -443,7 +475,7 @@ const Login = (props) => {
                               </div>
                             </div>
                           </div>
-                        </form>
+                        </Form>
                       </div>
 
                       <div className="mt-5 text-center">

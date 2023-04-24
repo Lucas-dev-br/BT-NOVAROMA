@@ -6,7 +6,7 @@ import Flatpickr from "react-flatpickr";
 
 //import images
 import progileBg from '../../../../assets/images/profile-bg.jpg';
-import avatar1 from '../../../../assets/images/users/avatar-1.jpg';
+import avatar1 from '../../../../assets/images/users/lucasperfil.jpg';
 
 const Settings = () => {
     const [activeTab, setActiveTab] = useState("1");
@@ -31,7 +31,7 @@ const Settings = () => {
                                             className="profile-foreground-img-file-input" />
                                         <Label htmlFor="profile-foreground-img-file-input"
                                             className="profile-photo-edit btn btn-light">
-                                            <i className="ri-image-edit-line align-bottom me-1"></i> Change Cover
+                                            <i className="ri-image-edit-line align-bottom me-1"></i> Trocar Fundo
                                         </Label>
                                     </div>
                                 </div>
@@ -58,8 +58,8 @@ const Settings = () => {
                                                 </Label>
                                             </div>
                                         </div>
-                                        <h5 className="fs-16 mb-1">Anna Adame</h5>
-                                        <p className="text-muted mb-0">Lead Designer / Developer</p>
+                                        <h5 className="fs-16 mb-1">Lucas Henrique</h5>
+                                        <p className="text-muted mb-0">Desenvolvedor</p>
                                     </div>
                                 </CardBody>
                             </Card>
@@ -68,7 +68,7 @@ const Settings = () => {
                                 <CardBody>
                                     <div className="d-flex align-items-center mb-5">
                                         <div className="flex-grow-1">
-                                            <h5 className="card-title mb-0">Complete Your Profile</h5>
+                                            <h5 className="card-title mb-0">Termine seu perfil</h5>
                                         </div>
                                         <div className="flex-shrink-0">
                                             <Link to="#" className="badge bg-light text-primary fs-12"><i
@@ -87,7 +87,7 @@ const Settings = () => {
                                 <CardBody>
                                     <div className="d-flex align-items-center mb-4">
                                         <div className="flex-grow-1">
-                                            <h5 className="card-title mb-0">Portfolio</h5>
+                                            <h5 className="card-title mb-0">Contato</h5>
                                         </div>
                                         <div className="flex-shrink-0">
                                             <Link to="#" className="badge bg-light text-primary fs-12"><i
@@ -101,7 +101,7 @@ const Settings = () => {
                                             </span>
                                         </div>
                                         <Input type="email" className="form-control" id="gitUsername" placeholder="Username"
-                                            defaultValue="@daveadame" />
+                                            defaultValue="lucas-dev-br" />
                                     </div>
                                     <div className="mb-3 d-flex">
                                         <div className="avatar-xs d-block flex-shrink-0 me-3">
@@ -110,7 +110,7 @@ const Settings = () => {
                                             </span>
                                         </div>
                                         <Input type="text" className="form-control" id="websiteInput"
-                                            placeholder="www.example.com" defaultValue="www.velzon.com" />
+                                            placeholder="www.example.com" defaultValue="lucas-dev-br.github.io" />
                                     </div>
                                     <div className="mb-3 d-flex">
                                         <div className="avatar-xs d-block flex-shrink-0 me-3">
@@ -121,15 +121,7 @@ const Settings = () => {
                                         <Input type="text" className="form-control" id="dribbleName" placeholder="Username"
                                             defaultValue="@dave_adame" />
                                     </div>
-                                    <div className="d-flex">
-                                        <div className="avatar-xs d-block flex-shrink-0 me-3">
-                                            <span className="avatar-title rounded-circle fs-16 bg-danger">
-                                                <i className="ri-pinterest-fill"></i>
-                                            </span>
-                                        </div>
-                                        <Input type="text" className="form-control" id="pinterestName"
-                                            placeholder="Username" defaultValue="Advance Dave" />
-                                    </div>
+                                    
                                 </CardBody>
                             </Card>
                         </Col>
@@ -191,56 +183,44 @@ const Settings = () => {
                                                 <Row>
                                                     <Col lg={6}>
                                                         <div className="mb-3">
-                                                            <Label htmlFor="firstnameInput" className="form-label">First
-                                                                Name</Label>
+                                                            <Label htmlFor="firstnameInput" className="form-label">Nome</Label>
                                                             <Input type="text" className="form-control" id="firstnameInput"
-                                                                placeholder="Enter your firstname" defaultValue="Dave" />
+                                                                placeholder="Digite seu nome" defaultValue="Lucas" />
                                                         </div>
                                                     </Col>
                                                     <Col lg={6}>
                                                         <div className="mb-3">
-                                                            <Label htmlFor="lastnameInput" className="form-label">Last
-                                                                Name</Label>
+                                                            <Label htmlFor="lastnameInput" className="form-label">
+                                                                SobreNome</Label>
                                                             <Input type="text" className="form-control" id="lastnameInput"
-                                                                placeholder="Enter your lastname" defaultValue="Adame" />
+                                                                placeholder="Enter your lastname" defaultValue="Henrique" />
                                                         </div>
                                                     </Col>
                                                     <Col lg={6}>
                                                         <div className="mb-3">
-                                                            <Label htmlFor="phonenumberInput" className="form-label">Phone
-                                                                Number</Label>
+                                                            <Label htmlFor="phonenumberInput" className="form-label">
+                                                                Telefone</Label>
                                                             <Input type="text" className="form-control"
                                                                 id="phonenumberInput"
                                                                 placeholder="Enter your phone number"
-                                                                defaultValue="+(1) 987 6543" />
+                                                                defaultValue="+55 (87) 98140-4263" />
                                                         </div>
                                                     </Col>
                                                     <Col lg={6}>
                                                         <div className="mb-3">
                                                             <Label htmlFor="emailInput" className="form-label">Email
-                                                                Address</Label>
+                                                                </Label>
                                                             <Input type="email" className="form-control" id="emailInput"
                                                                 placeholder="Enter your email"
-                                                                defaultValue="daveadame@velzon.com" />
+                                                                defaultValue="lucasenge@hotmail.com" />
                                                         </div>
                                                     </Col>
+                                                    
                                                     <Col lg={12}>
                                                         <div className="mb-3">
-                                                            <Label htmlFor="JoiningdatInput" className="form-label">Joining
-                                                                Date</Label>
-                                                            <Flatpickr
-                                                                className="form-control"
-                                                                options={{
-                                                                    dateFormat: "d M, Y"
-                                                                }}
-                                                            />
-                                                        </div>
-                                                    </Col>
-                                                    <Col lg={12}>
-                                                        <div className="mb-3">
-                                                            <Label htmlFor="skillsInput" className="form-label">Skills</Label>
+                                                            <Label htmlFor="skillsInput" className="form-label">Habilidades</Label>
                                                             <select className="form-select mb-3">
-                                                                <option >Select your Skill </option>
+                                                                <option >Selecione suas competencias </option>
                                                                 <option value="Choices1">CSS</option>
                                                                 <option value="Choices2">HTML</option>
                                                                 <option value="Choices3">PYTHON</option>
@@ -252,10 +232,10 @@ const Settings = () => {
                                                     <Col lg={6}>
                                                         <div className="mb-3">
                                                             <Label htmlFor="designationInput"
-                                                                className="form-label">Designation</Label>
+                                                                className="form-label">Cargo</Label>
                                                             <Input type="text" className="form-control"
                                                                 id="designationInput" placeholder="Designation"
-                                                                defaultValue="Lead Designer / Developer" />
+                                                                defaultValue="Desenvolvedor" />
                                                         </div>
                                                     </Col>
                                                     <Col lg={6}>
@@ -263,47 +243,48 @@ const Settings = () => {
                                                             <Label htmlFor="websiteInput1"
                                                                 className="form-label">Website</Label>
                                                             <Input type="text" className="form-control" id="websiteInput1"
-                                                                placeholder="www.example.com" defaultValue="www.velzon.com" />
+                                                                placeholder="www.example.com" defaultValue="lucas-dev-br.github.io" />
                                                         </div>
                                                     </Col>
                                                     <Col lg={4}>
                                                         <div className="mb-3">
-                                                            <Label htmlFor="cityInput" className="form-label">City</Label>
+                                                            <Label htmlFor="cityInput" className="form-label">Cidade</Label>
                                                             <Input type="text" className="form-control" id="cityInput"
-                                                                placeholder="City" defaultValue="California" />
+                                                                placeholder="City" defaultValue="Caruaru" />
                                                         </div>
                                                     </Col>
                                                     <Col lg={4}>
                                                         <div className="mb-3">
-                                                            <Label htmlFor="countryInput" className="form-label">Country</Label>
+                                                            <Label htmlFor="countryInput" className="form-label">Pais</Label>
                                                             <Input type="text" className="form-control" id="countryInput"
-                                                                placeholder="Country" defaultValue="United States" />
+                                                                placeholder="Country" defaultValue="Brasil" />
                                                         </div>
                                                     </Col>
                                                     <Col lg={4}>
                                                         <div className="mb-3">
-                                                            <Label htmlFor="zipcodeInput" className="form-label">Zip
-                                                                Code</Label>
+                                                            <Label htmlFor="zipcodeInput" className="form-label">
+                                                                CEP
+                                                                </Label>
                                                             <Input type="text" className="form-control" minLength="5"
                                                                 maxLength="6" id="zipcodeInput"
-                                                                placeholder="Enter zipcode" defaultValue="90011" />
+                                                                placeholder="Enter zipcode" defaultValue="Av. Das Nações" />
                                                         </div>
                                                     </Col>
                                                     <Col lg={12}>
                                                         <div className="mb-3 pb-2">
                                                             <Label htmlFor="exampleFormControlTextarea"
-                                                                className="form-label">Description</Label>
+                                                                className="form-label">Descrição</Label>
                                                             <textarea className="form-control"
                                                                 id="exampleFormControlTextarea"
-                                                                rows="3" defaultValue="Hi I'm Anna Adame, It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is European languages are members of the same family."></textarea>
+                                                                rows="3" defaultValue=""></textarea>
                                                         </div>
                                                     </Col>
                                                     <Col lg={12}>
                                                         <div className="hstack gap-2 justify-content-end">
                                                             <button type="button"
-                                                                className="btn btn-primary">Updates</button>
+                                                                className="btn btn-soft-success ">Cancelar</button>
                                                             <button type="button"
-                                                                className="btn btn-soft-success">Cancel</button>
+                                                                className="btn btn-primary">Salvar</button>
                                                         </div>
                                                     </Col>
                                                 </Row>

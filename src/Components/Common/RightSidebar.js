@@ -127,14 +127,7 @@ const RightSidebar = () => {
         <i className="ri-arrow-up-line"></i>
       </button>
       <div>
-        <div className="customizer-setting d-none d-md-block">
-          <div
-            onClick={toggleLeftCanvas}
-            className="btn-info btn-rounded shadow-lg btn btn-icon btn-lg p-2"
-          >
-            <i className="mdi mdi-spin mdi-cog-outline fs-22"></i>
-          </div>
-        </div>
+        
         <Offcanvas
           isOpen={open}
           toggle={toggleLeftCanvas}

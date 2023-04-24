@@ -11,11 +11,11 @@ import company3 from "../../assets/images/companies/img-3.png";
 import company5 from "../../assets/images/companies/img-5.png";
 import company8 from "../../assets/images/companies/img-8.png";
 
-import avatar1 from "../../assets/images/users/avatar-1.jpg";
-import avatar2 from "../../assets/images/users/avatar-2.jpg";
-import avatar3 from "../../assets/images/users/avatar-3.jpg";
-import avatar4 from "../../assets/images/users/avatar-4.jpg";
-import avatar6 from "../../assets/images/users/avatar-6.jpg";
+import avatar1 from "../../assets/images/users/AVATAR1.jpg";
+import avatar2 from "../../assets/images/users/AVATAR2.jpg";
+import avatar3 from "../../assets/images/users/AVATAR3.jpg";
+import avatar4 from "../../assets/images/users/AVATAR4.jpg";
+import avatar6 from "../../assets/images/users/AVATAR5.png";
 
 const ecomWidgets = [
     {
@@ -183,68 +183,48 @@ const topSellers = [
 const recentOrders = [
     {
         id: 1,
-        orderId: "#VZ2112",
         img: avatar1,
-        name: "Alex Smith",
-        product: "Clothes",
-        amount: "109.00",
-        vendor: "Zoetic Fashion",
-        status: "Paid",
+        name: "ADASI SOFTWARE",
+        product: "Estagiario(a)",
+        vendor: "11/08/2022",
+        status: "Confirmado",
         statusClass: "success",
-        rating: "5.0",
-        votes: "61",
     },
     {
         id: 2,
-        orderId: "#VZ2111",
         img: avatar2,
-        name: "Jansh Brown",
-        product: "Kitchen Storage",
-        amount: "149.00",
-        vendor: "Micro Design",
-        status: "Pending",
+        name: "SoftMakers",
+        product: "Desenvolvedor Jr.",
+        vendor: "11/02/2023",
+        status: "Pendente",
         statusClass: "warning",
-        rating: "4.5",
-        votes: "61",
     },
     {
         id: 3,
-        orderId: "#VZ2109",
         img: avatar3,
-        name: "Ayaan Bowen",
-        product: "Bike Accessories",
-        amount: "215.00",
-        vendor: "Nesta Technologies",
-        status: "Paid",
+        name: "Colmeia",
+        product: "Agiota",
+        vendor: "11/01/2023",
+        status: "Confirmado",
         statusClass: "success",
-        rating: "4.9",
-        votes: "89",
     },
     {
         id: 4,
-        orderId: "#VZ2108",
         img: avatar4,
-        name: "Prezy Mark",
-        product: "Furniture",
-        amount: "199.00",
-        vendor: "Syntyce Solutions",
-        status: "Unpaid",
+        name: "Navit",
+        product: "Gerente de Projetos",
+        vendor: "23/11/2022",
+        status: "Encerrada",
         statusClass: "danger",
-        rating: "4.3",
-        votes: "47",
     },
     {
         id: 5,
-        orderId: "#VZ2107",
         img: avatar6,
-        name: "Vihan Hudda",
-        product: "Bags and Wallets",
-        amount: "330.00",
-        vendor: "iTest Factory",
-        status: "Paid",
+        name: "UNIMED",
+        product: "Fisioterapeuta",
+        vendor: "05/04/2023",
+        status: "Pendente",
         statusClass: "success",
-        rating: "4.7",
-        votes: "161",
     },
 ];
 

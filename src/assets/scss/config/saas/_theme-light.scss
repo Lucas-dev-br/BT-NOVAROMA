@@ -15,17 +15,17 @@
   --#{$variable-prefix}vertical-menu-sub-item-color:          #{darken($gray-600, 4%)};
   --#{$variable-prefix}vertical-menu-sub-item-hover-color:    #{$primary};
   --#{$variable-prefix}vertical-menu-sub-item-active-color:   #{$primary};
-  --#{$variable-prefix}vertical-menu-title-color:             #919da9;
+  --#{$variable-prefix}vertical-menu-title-color:             #000;
   
   //vertical dark
   --#{$variable-prefix}vertical-menu-bg-dark:                 #38454a;
-  --#{$variable-prefix}vertical-menu-item-color-dark:         #a1b7bf;
+  --#{$variable-prefix}vertical-menu-item-color-dark:         #000;
   --#{$variable-prefix}vertical-menu-item-hover-color-dark:   #{$white};
   --#{$variable-prefix}vertical-menu-item-active-color-dark:  #{$white};
-  --#{$variable-prefix}vertical-menu-sub-item-color-dark:     #a1b7bf;
+  --#{$variable-prefix}vertical-menu-sub-item-color-dark:     #000;
   --#{$variable-prefix}vertical-menu-sub-item-hover-color-dark: #{$white};
   --#{$variable-prefix}vertical-menu-sub-item-active-color-dark: #{$white};
-  --#{$variable-prefix}vertical-menu-title-color-dark:         #a1b7bf;
+  --#{$variable-prefix}vertical-menu-title-color-dark:         #000;
 
   // Topbar - (Default Light)
   --#{$variable-prefix}header-bg:  #{$white};
