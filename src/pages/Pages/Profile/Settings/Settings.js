@@ -15,7 +15,7 @@ const Settings = () => {
         if (activeTab !== tab) setActiveTab(tab);
     };
 
-    document.title="Profile Settings | Velzon - React Admin & Dashboard Template";
+    document.title="Configurações BT-StageUp";
 
     return (
         <React.Fragment>
@@ -70,10 +70,7 @@ const Settings = () => {
                                         <div className="flex-grow-1">
                                             <h5 className="card-title mb-0">Termine seu perfil</h5>
                                         </div>
-                                        <div className="flex-shrink-0">
-                                            <Link to="#" className="badge bg-light text-primary fs-12"><i
-                                                className="ri-edit-box-line align-bottom me-1"></i> Edit</Link>
-                                        </div>
+                                        
                                     </div>
                                     <div className="progress animated-progress custom-progress progress-label">
                                         <div className="progress-bar bg-danger" role="progressbar" style={{ "width": "30%" }}
@@ -89,10 +86,7 @@ const Settings = () => {
                                         <div className="flex-grow-1">
                                             <h5 className="card-title mb-0">Contato</h5>
                                         </div>
-                                        <div className="flex-shrink-0">
-                                            <Link to="#" className="badge bg-light text-primary fs-12"><i
-                                                className="ri-add-fill align-bottom me-1"></i> Add</Link>
-                                        </div>
+                                        
                                     </div>
                                     <div className="mb-3 d-flex">
                                         <div className="avatar-xs d-block flex-shrink-0 me-3">
@@ -112,15 +106,7 @@ const Settings = () => {
                                         <Input type="text" className="form-control" id="websiteInput"
                                             placeholder="www.example.com" defaultValue="lucas-dev-br.github.io" />
                                     </div>
-                                    <div className="mb-3 d-flex">
-                                        <div className="avatar-xs d-block flex-shrink-0 me-3">
-                                            <span className="avatar-title rounded-circle fs-16 bg-success">
-                                                <i className="ri-dribbble-fill"></i>
-                                            </span>
-                                        </div>
-                                        <Input type="text" className="form-control" id="dribbleName" placeholder="Username"
-                                            defaultValue="@dave_adame" />
-                                    </div>
+                                    
                                     
                                 </CardBody>
                             </Card>
@@ -138,7 +124,7 @@ const Settings = () => {
                                                     tabChange("1");
                                                 }}>
                                                 <i className="fas fa-home"></i>
-                                                Personal Details
+                                                Detalhes pessoais
                                             </NavLink>
                                         </NavItem>
                                         <NavItem>
@@ -149,7 +135,7 @@ const Settings = () => {
                                                 }}
                                                 type="button">
                                                 <i className="far fa-user"></i>
-                                                Change Password
+                                                Trocar senha
                                             </NavLink>
                                         </NavItem>
                                         <NavItem >
@@ -160,20 +146,10 @@ const Settings = () => {
                                                 }}
                                                 type="button">
                                                 <i className="far fa-envelope"></i>
-                                                Experience
+                                                Experiencia
                                             </NavLink>
                                         </NavItem>
-                                        <NavItem>
-                                            <NavLink to="#"
-                                                className={classnames({ active: activeTab === "4" }, "text-body")}
-                                                onClick={() => {
-                                                    tabChange("4");
-                                                }}
-                                                type="button">
-                                                <i className="far fa-envelope"></i>
-                                                Privacy Policy
-                                            </NavLink>
-                                        </NavItem>
+                                        
                                     </Nav>
                                 </CardHeader>
                                 <CardBody className="p-4">
@@ -296,27 +272,25 @@ const Settings = () => {
                                                 <Row className="g-2">
                                                     <Col lg={4}>
                                                         <div>
-                                                            <Label htmlFor="oldpasswordInput" className="form-label">Old
-                                                                Password*</Label>
+                                                            <Label htmlFor="oldpasswordInput" className="form-label">Senha antiga</Label>
                                                             <Input type="password" className="form-control"
                                                                 id="oldpasswordInput"
-                                                                placeholder="Enter current password" />
+                                                                placeholder="Insira sua senha" />
                                                         </div>
                                                     </Col>
 
                                                     <Col lg={4}>
                                                         <div>
-                                                            <Label htmlFor="newpasswordInput" className="form-label">New
-                                                                Password*</Label>
+                                                            <Label htmlFor="newpasswordInput" className="form-label">Nova senha*</Label>
                                                             <Input type="password" className="form-control"
-                                                                id="newpasswordInput" placeholder="Enter new password" />
+                                                                id="newpasswordInput" placeholder="Digite sua nova senha" />
                                                         </div>
                                                     </Col>
 
                                                     <Col lg={4}>
                                                         <div>
-                                                            <Label htmlFor="confirmpasswordInput" className="form-label">Confirm
-                                                                Password*</Label>
+                                                            <Label htmlFor="confirmpasswordInput" className="form-label">Confirmar senha*
+                                                                </Label>
                                                             <Input type="password" className="form-control"
                                                                 id="confirmpasswordInput"
                                                                 placeholder="Confirm password" />
@@ -326,15 +300,15 @@ const Settings = () => {
                                                     <Col lg={12}>
                                                         <div className="mb-3">
                                                             <Link to="#"
-                                                                className="link-primary text-decoration-underline">Forgot
-                                                                Password ?</Link>
+                                                                className="link-primary text-decoration-underline">Esqueceu sua senha?
+                                                                </Link>
                                                         </div>
                                                     </Col>
 
                                                     <Col lg={12}>
                                                         <div className="text-end">
-                                                            <button type="button" className="btn btn-success">Change
-                                                                Password</button>
+                                                            <button type="button" className="btn btn-success">Mudar senha
+                                                               </button>
                                                         </div>
                                                     </Col>
 
@@ -342,10 +316,8 @@ const Settings = () => {
 
                                             </Form>
                                             <div className="mt-4 mb-3 border-bottom pb-2">
-                                                <div className="float-end">
-                                                    <Link to="#" className="link-primary">All Logout</Link>
-                                                </div>
-                                                <h5 className="card-title">Login History</h5>
+                                                
+                                                <h5 className="card-title">Historico de login</h5>
                                             </div>
                                             <div className="d-flex align-items-center mb-3">
                                                 <div className="flex-shrink-0 avatar-sm">
@@ -355,43 +327,14 @@ const Settings = () => {
                                                 </div>
                                                 <div className="flex-grow-1 ms-3">
                                                     <h6>iPhone 12 Pro</h6>
-                                                    <p className="text-muted mb-0">Los Angeles, United States - March 16 at
-                                                        2:47PM</p>
+                                                    <p className="text-muted mb-0">Caruaru, Pernambuco - 16 de Março há
+                                                        12:47</p>
                                                 </div>
                                                 <div>
-                                                    <Link to="#">Logout</Link>
+                                                    <Link to="#">Sair</Link>
                                                 </div>
                                             </div>
-                                            <div className="d-flex align-items-center mb-3">
-                                                <div className="flex-shrink-0 avatar-sm">
-                                                    <div className="avatar-title bg-light text-primary rounded-3 fs-18">
-                                                        <i className="ri-tablet-line"></i>
-                                                    </div>
-                                                </div>
-                                                <div className="flex-grow-1 ms-3">
-                                                    <h6>Apple iPad Pro</h6>
-                                                    <p className="text-muted mb-0">Washington, United States - November 06
-                                                        at 10:43AM</p>
-                                                </div>
-                                                <div>
-                                                    <Link to="#">Logout</Link>
-                                                </div>
-                                            </div>
-                                            <div className="d-flex align-items-center mb-3">
-                                                <div className="flex-shrink-0 avatar-sm">
-                                                    <div className="avatar-title bg-light text-primary rounded-3 fs-18">
-                                                        <i className="ri-smartphone-line"></i>
-                                                    </div>
-                                                </div>
-                                                <div className="flex-grow-1 ms-3">
-                                                    <h6>Galaxy S21 Ultra 5G</h6>
-                                                    <p className="text-muted mb-0">Conneticut, United States - June 12 at
-                                                        3:24PM</p>
-                                                </div>
-                                                <div>
-                                                    <Link to="#">Logout</Link>
-                                                </div>
-                                            </div>
+                                         
                                             <div className="d-flex align-items-center">
                                                 <div className="flex-shrink-0 avatar-sm">
                                                     <div className="avatar-title bg-light text-primary rounded-3 fs-18">
@@ -400,11 +343,11 @@ const Settings = () => {
                                                 </div>
                                                 <div className="flex-grow-1 ms-3">
                                                     <h6>Dell Inspiron 14</h6>
-                                                    <p className="text-muted mb-0">Phoenix, United States - July 26 at
-                                                        8:10AM</p>
+                                                    <p className="text-muted mb-0">Garanhuns, Pernambuco - 26 de julho 26 há
+                                                        8:10</p>
                                                 </div>
                                                 <div>
-                                                    <Link to="#">Logout</Link>
+                                                    <Link to="#">Sair</Link>
                                                 </div>
                                             </div>
                                         </TabPane>
@@ -416,35 +359,35 @@ const Settings = () => {
                                                         <Row>
                                                             <Col lg={12}>
                                                                 <div className="mb-3">
-                                                                    <Label htmlFor="jobTitle" className="form-label">Job
-                                                                        Title</Label>
+                                                                    <Label htmlFor="jobTitle" className="form-label">Cargo
+                                                                        </Label>
                                                                     <Input type="text" className="form-control"
                                                                         id="jobTitle" placeholder="Job title"
-                                                                        defaultValue="Lead Designer / Developer" />
+                                                                        defaultValue="Desenvolvedor" />
                                                                 </div>
                                                             </Col>
 
                                                             <Col lg={6}>
                                                                 <div className="mb-3">
-                                                                    <Label htmlFor="companyName" className="form-label">Company
-                                                                        Name</Label>
+                                                                    <Label htmlFor="companyName" className="form-label">Nome da empresa
+                                                                        </Label>
                                                                     <Input type="text" className="form-control"
-                                                                        id="companyName" placeholder="Company name"
-                                                                        defaultValue="Themesbrand" />
+                                                                        id="companyName" placeholder="Empresa"
+                                                                        defaultValue="StageUp" />
                                                                 </div>
                                                             </Col>
 
                                                             <Col lg={6}>
                                                                 <div className="mb-3">
                                                                     <label htmlFor="experienceYear"
-                                                                        className="form-label">Experience Years</label>
+                                                                        className="form-label">Experiencia</label>
                                                                     <Row>
                                                                         <Col lg={5}>
                                                                             <select className="form-control" data-choices
                                                                                 data-choices-search-false
                                                                                 name="experienceYear"
                                                                                 id="experienceYear">
-                                                                                <option defaultValue="">Select years</option>
+                                                                                <option defaultValue="">Inicio</option>
                                                                                 <option value="Choice 1">2001</option>
                                                                                 <option value="Choice 2">2002</option>
                                                                                 <option value="Choice 3">2003</option>
@@ -471,14 +414,14 @@ const Settings = () => {
                                                                         </Col>
 
                                                                         <div className="col-auto align-self-center">
-                                                                            to
+                                                                            Até
                                                                         </div>
 
                                                                         <Col lg={5}>
                                                                             <select className="form-control" data-choices
                                                                                 data-choices-search-false
                                                                                 name="choices-single-default2">
-                                                                                <option defaultValue="">Select years</option>
+                                                                                <option defaultValue="">Final</option>
                                                                                 <option value="Choice 1">2001</option>
                                                                                 <option value="Choice 2">2002</option>
                                                                                 <option value="Choice 3">2003</option>
@@ -511,17 +454,13 @@ const Settings = () => {
                                                                 <div className="mb-3">
                                                                     <Label htmlFor="jobDescription" className="form-label">Job
                                                                         Description</Label>
-                                                                    {/* <textarea className="form-control" id="jobDescription"
-                                                                    defaultValue=""
+                                                                    <textarea className="form-control" id="jobDescription"
                                                                         rows="3"
-                                                                        placeholder="Enter description">You always want to make sure that your fonts work well together and try to limit the number of fonts you use to three or less. Experiment and play around with the fonts that you already have in the software you're working with reputable font websites. </textarea> */}
+                                                                        placeholder="Enter description"> </textarea>
                                                                 </div>
                                                             </Col>
 
-                                                            <div className="hstack gap-2 justify-content-end">
-                                                                <Link className="btn btn-success"
-                                                                    to="#">Delete</Link>
-                                                            </div>
+                                                           
                                                         </Row>
                                                     </div>
                                                 </div>
@@ -529,12 +468,13 @@ const Settings = () => {
                                                 </div>
 
                                                 <Col lg={12}>
-                                                    <div className="hstack gap-2">
-                                                        <button type="submit" className="btn btn-success">Update</button>
-                                                        <Link to="#" className="btn btn-primary">Add
-                                                            New</Link>
-                                                    </div>
-                                                </Col>
+                                                        <div className="hstack gap-2 justify-content-end">
+                                                            <button type="button"
+                                                                className="btn btn-soft-success ">Cancelar</button>
+                                                            <button type="button"
+                                                                className="btn btn-primary">Salvar</button>
+                                                        </div>
+                                                    </Col>
                                             </form>
                                         </TabPane>
 

@@ -216,7 +216,7 @@ const PersonalInfo = ({ show, onCloseClick, currentuser, cuurentiseImg }) => {
           </div>
         </div>
         <div className="border-top border-top-dashed p-3">
-          <h5 className="fs-15 mb-3">Personal Details</h5>
+          <h5 className="fs-15 mb-3">Configurações pessoais</h5>
           <div className="mb-3">
             <p className="text-muted text-uppercase fw-medium fs-12 mb-1">
               Number

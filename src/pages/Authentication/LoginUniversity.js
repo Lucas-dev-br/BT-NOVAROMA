@@ -338,7 +338,7 @@ const LoginUniversity = (props) => {
                   <Col lg={6}>
                     <div className="p-lg-5 p-4 ">
                       <div className="text-center">
-                        <img src={logo} />
+                        <img src={logo} width={150}/>
                       </div>
 
                       <div className="mt-4">
