@@ -421,12 +421,12 @@ const publicRoutes = [
   // Login estudante e insituição
   { path: "/login/estudante", component: Login },
   { path: "/login/instituição", component: LoginUniversity },
+  { path: "/register", component: Register },
 
   // Authentication Page
 
   { path: "/logout", component: Logout },
   { path: "/forgot-password", component: ForgetPasswordPage },
-  { path: "/register", component: Register },
 
   //AuthenticationInner pages
   { path: "/auth-signin-basic", component: BasicSignIn },

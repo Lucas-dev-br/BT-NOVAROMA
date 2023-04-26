@@ -90,6 +90,7 @@ const Layout = (props) => {
     call dark/light mode
     */
     const onChangeLayoutMode = (value) => {
+        console.log(value)
         if (changeLayoutMode) {
             dispatch(changeLayoutMode(value));
         }

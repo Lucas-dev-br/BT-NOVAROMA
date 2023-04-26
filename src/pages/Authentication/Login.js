@@ -489,6 +489,17 @@ const Login = (props) => {
                           </a>{" "}
                         </p>
                       </div>
+                      <div className="mt-2 text-center">
+                        <p className="mb-0">
+                          Não tem uma conta?{" "}
+                          <a
+                            href="/register"
+                            className="fw-semibold text-primary text-decoration-underline"
+                          >
+                            Clique aqui
+                          </a>{" "}
+                        </p>
+                      </div>
                     </div>
                   </Col>
                 </Row>

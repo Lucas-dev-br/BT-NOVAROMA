@@ -1,6 +1,6 @@
 const layoutTypes = {
-  HORIZONTAL: "horizontal",
-  VERTICAL: "vertical",
+  HORIZONTAL: "vertical",
+  VERTICAL: "horizontal",
   TWOCOLUMN: "twocolumn",
 };
 

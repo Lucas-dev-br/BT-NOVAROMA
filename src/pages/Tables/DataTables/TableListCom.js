@@ -24,7 +24,7 @@ import fil from "../../../assets/images/svg/crypto-icons/fil.svg";
 import aave from "../../../assets/images/svg/crypto-icons/aave.svg";
 import ada from "../../../assets/images/svg/crypto-icons/ada.svg";
 
-const BasicTable = () => {
+const TableList = () => {
 
     const columns = [
         {
@@ -135,215 +135,11 @@ const BasicTable = () => {
     const data = [
         {
             srNo: "01",
-            assigned: [avatar3],
             id: "VLZ-452",
             purchaseId: "VLZ1400087402",
             title: "Post launch reminder/ post list",
             user: "Joseph Parker",
-            createdBy: "Joseph Parker",
-            createDate: "03 Oct, 2021",
-            status: "Re-open",
-            priority: "High",
-        },
-        {
-            srNo: "02",
-            id: "VLZ-453",
-            assigned: [avatar3],
-
-            purchaseId: "VLZ1400087425",
-            title: "Additional Calendar",
-            user: "Diana Kohler",
-            createdBy: "Mary Rucker",
-            createDate: "05 Oct, 2021",
-            status: "On-Hold",
-            priority: "Medium",
-        },
-        {
-            srNo: "03",
-            id: "VLZ-454",
-            assigned: [avatar3],
-
-            purchaseId: "VLZ1400087438",
-            title: "Make a creating an account profile",
-            user: "Tonya Noble",
-            createdBy: "Tonya Noble",
-            createDate: "27 April, 2022",
-            status: "Closed",
-            priority: "Low",
-        },
-        {
-            srNo: "04",
-            id: "VLZ-455",
-            assigned: [avatar3],
-
-            purchaseId: "VLZ1400087748",
-            title: "Apologize for shopping Error!",
-            user: "Joseph Parker",
-            createdBy: "Joseph Parker",
-            createDate: "14 June, 2021",
-            status: "Inprogress",
-            priority: "Medium",
-        },
-        {
-            srNo: "05",
-            id: "VLZ-456",
-            assigned: [avatar3],
-
-            purchaseId: "VLZ1400087547",
-            title: "Support for theme",
-            user: "Donald Palmer",
-            createdBy: "Donald Palmer",
-            createDate: "25 June, 2021",
-            status: "Closed",
-            priority: "Low",
-        },
-        {
-            srNo: "06",
-            id: "VLZ-457",
-            assigned: [avatar3],
-
-            purchaseId: "VLZ1400087245",
-            title: "Benner design for FB & Twitter",
-            user: "Mary Rucker",
-            createdBy: "Mary Rucker",
-            createDate: "14 Aug, 2021",
-            status: "Inprogress",
-            priority: "Medium",
-        },
-        {
-            srNo: "07",
-            id: "VLZ-458",
-            assigned: [avatar3],
-
-            purchaseId: "VLZ1400087785",
-            title: "Change email option process",
-            user: "James Morris",
-            createdBy: "James Morris",
-            createDate: "12 March, 2022",
-            status: "Open",
-            priority: "High",
-        },
-        {
-            srNo: "08",
-            id: "VLZ-460",
-            assigned: [avatar3],
-
-            purchaseId: "VLZ1400087745",
-            title: "Support for theme",
-            user: "Nathan Cole",
-            createdBy: "Nathan Cole",
-            createDate: "28 Feb, 2022",
-            status: "On-Hold",
-            priority: "Low",
-        },
-        {
-            srNo: "09",
-            id: "VLZ-461",
-            assigned: [avatar3],
-
-            purchaseId: "VLZ1400087179",
-            title: "Form submit issue",
-            user: "Grace Coles",
-            createdBy: "Grace Coles",
-            createDate: "07 Jan, 2022",
-            status: "New",
-            priority: "High",
-        },
-        {
-            srNo: "10",
-            id: "VLZ-462",
-            assigned: [avatar3],
-
-            purchaseId: "VLZ140008856",
-            title: "Edit customer testimonial",
-            user: "Freda",
-            createdBy: "Freda",
-            createDate: "16 Aug, 2021",
-            status: "Closed",
-            priority: "Medium",
-        },
-    ];
-    return (
-        <DataTable
-            columns={columns}
-            data={data}
-            pagination
-        />
-    );
-};
-const TableList = () => {
-
-    const columns = [   
-        
-            {   name: "Empresa",
-                sortable: true,
-                selector: (cell) => {
-                    return (
-                        <React.Fragment>
-                            <div className="avatar-group">
-                                {cell.assigned.map((item, index) => (
-                                    <Link key={index} to="#" className="avatar-group-item">
-                                        <img src={item} alt="" className="rounded-circle avatar-xxs me-2" />
-                                        {cell.user}
-                                    </Link>
-                                ))}
-                            </div>
-                        </React.Fragment>
-                    );
-                },
-            },
-        
-        
-     
-        {
-            name: <span className='font-weight-bold fs-13'>Vaga</span>,
-            selector: row => row.createdBy,
-            sortable: true
-        },
-        {
-            name: <span className='font-weight-bold fs-13'>Data</span>,
-            selector: row => row.createDate,
-            sortable: true
-        },
-        
-        {
-            name: <span className='font-weight-bold fs-13'>Status</span>,
-            sortable: true,
-            selector: (cell) => {
-                switch (cell.priority) {
-                    case "High":
-                        return <span className="badge bg-danger"> {cell.priority} </span>;
-                    case "Medium":
-                        return <span className="badge bg-info"> {cell.priority} </span>;
-                    case "Low":
-                        return <span className="badge bg-success"> {cell.priority} </span>;
-                    default:
-                        return <span className="badge bg-danger"> {cell.priority} </span>;
-                }
-            },
-        },
-        {
-            sortable: true,
-
-            cell: () => {
-                return (
-                    <button type="button" className="btn btn-soft-info btn-md">
-                    Canditar-se <i className="ri-account-circle-fill align-middle"></i> 
-        </button>
-                );
-            },
-        },
-    ];
-
-    const data = [
-        {
-            srNo: "01",
-            id: "VLZ-452",
-            purchaseId: "VLZ1400087402",
-            title: "Post launch reminder/ post list",
-            user: "Joseph Parker",
-            assigned: [avatar3],
-
+            assigned: "Alexis Clarke",
             createdBy: "Joseph Parker",
             createDate: "03 Oct, 2021",
             status: "Re-open",
@@ -355,8 +151,7 @@ const TableList = () => {
             purchaseId: "VLZ1400087425",
             title: "Additional Calendar",
             user: "Diana Kohler",
-            assigned: [avatar3],
-
+            assigned: "Admin",
             createdBy: "Mary Rucker",
             createDate: "05 Oct, 2021",
             status: "On-Hold",
@@ -368,8 +163,7 @@ const TableList = () => {
             purchaseId: "VLZ1400087438",
             title: "Make a creating an account profile",
             user: "Tonya Noble",
-            assigned: [avatar3],
-
+            assigned: "Admin",
             createdBy: "Tonya Noble",
             createDate: "27 April, 2022",
             status: "Closed",
@@ -381,8 +175,7 @@ const TableList = () => {
             purchaseId: "VLZ1400087748",
             title: "Apologize for shopping Error!",
             user: "Joseph Parker",
-            assigned: [avatar3],
-
+            assigned: "Alexis Clarke",
             createdBy: "Joseph Parker",
             createDate: "14 June, 2021",
             status: "Inprogress",
@@ -394,8 +187,7 @@ const TableList = () => {
             purchaseId: "VLZ1400087547",
             title: "Support for theme",
             user: "Donald Palmer",
-            assigned: [avatar3],
-
+            assigned: "Admin",
             createdBy: "Donald Palmer",
             createDate: "25 June, 2021",
             status: "Closed",
@@ -407,8 +199,7 @@ const TableList = () => {
             purchaseId: "VLZ1400087245",
             title: "Benner design for FB & Twitter",
             user: "Mary Rucker",
-            assigned: [avatar3],
-
+            assigned: "Jennifer Carter",
             createdBy: "Mary Rucker",
             createDate: "14 Aug, 2021",
             status: "Inprogress",
@@ -420,8 +211,7 @@ const TableList = () => {
             purchaseId: "VLZ1400087785",
             title: "Change email option process",
             user: "James Morris",
-            assigned: [avatar3],
-
+            assigned: "Admin",
             createdBy: "James Morris",
             createDate: "12 March, 2022",
             status: "Open",
@@ -433,7 +223,7 @@ const TableList = () => {
             purchaseId: "VLZ1400087745",
             title: "Support for theme",
             user: "Nathan Cole",
-            assigned: [avatar2],
+            assigned: "Nancy Martino",
             createdBy: "Nathan Cole",
             createDate: "28 Feb, 2022",
             status: "On-Hold",
@@ -445,8 +235,7 @@ const TableList = () => {
             purchaseId: "VLZ1400087179",
             title: "Form submit issue",
             user: "Grace Coles",
-            assigned: [avatar3],
-
+            assigned: "Admin",
             createdBy: "Grace Coles",
             createDate: "07 Jan, 2022",
             status: "New",
@@ -458,8 +247,7 @@ const TableList = () => {
             purchaseId: "VLZ140008856",
             title: "Edit customer testimonial",
             user: "Freda",
-            assigned: [avatar3],
-
+            assigned: "Alexis Clarke",
             createdBy: "Freda",
             createDate: "16 Aug, 2021",
             status: "Closed",
@@ -1978,4 +1766,4 @@ const AjaxDatatables = () => {
 };
 
 
-export { TableList, BasicTable, ScrollVertical, ScrollHorizontal, AlternativePagination, FixedHeaderDatatables, ModalDataDatatables, AjaxDatatables };
+export { TableList, ScrollVertical, ScrollHorizontal, AlternativePagination, FixedHeaderDatatables, ModalDataDatatables, AjaxDatatables };

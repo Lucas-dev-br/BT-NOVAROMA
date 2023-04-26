@@ -339,8 +339,8 @@ const orders = [
   {
     id: 8,
     orderId: "#VZ2108",
-    customer: "Alexis Clarke",
-    productname: "USB Flash Drive Personalized with 3D Print",
+    customer: "Alexis Clrke",
+    productname: "USB",
     orderDate: "25 Oct, 2021, 05:33 AM",
     // orderDate: ["25 Oct, 2021", "05:33 AM"],
     // ordertime: "05:33 AM",

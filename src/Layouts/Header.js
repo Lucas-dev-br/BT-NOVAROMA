@@ -30,7 +30,7 @@ const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
       document.querySelector(".hamburger-icon").classList.toggle("open");
 
     //For collapse horizontal menu
-    if (document.documentElement.getAttribute("data-layout") === "horizontal") {
+    if (document.documentElement.getAttribute("data-layout") === "vertical") {
       document.body.classList.contains("menu")
         ? document.body.classList.remove("menu")
         : document.body.classList.add("menu");
@@ -86,7 +86,7 @@ const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
                   </span>
                 </Link>
               </div>
-
+{/* 
               <button
                 onClick={toogleMenuBtn}
                 type="button"
@@ -98,7 +98,7 @@ const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
                   <span></span>
                   <span></span>
                 </span>
-              </button>
+              </button> */}
 
               <SearchOption />
             </div>
@@ -136,22 +136,22 @@ const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
               </Dropdown>
 
               {/* LanguageDropdown */}
-              <LanguageDropdown />
+              {/* <LanguageDropdown /> */}
 
               {/* WebAppsDropdown */}
-              <WebAppsDropdown />
+              {/* <WebAppsDropdown /> */}
 
               {/* MyCartDropdwon */}
-              <MyCartDropdown />
+              {/* <MyCartDropdown /> */}
 
               {/* FullScreenDropdown */}
-              <FullScreenDropdown />
+              {/* <FullScreenDropdown /> */}
 
               {/* Dark/Light Mode set */}
-              <LightDark
+              {/* <LightDark
                 layoutMode={layoutModeType}
                 onChangeLayoutMode={onChangeLayoutMode}
-              />
+              /> */}
 
               {/* NotificationDropdown */}
               <NotificationDropdown />

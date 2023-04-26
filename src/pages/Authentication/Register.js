@@ -17,7 +17,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 
 //import images 
-import logoLight from "../../assets/images/logo-light.png";
+import logoLight from "../../assets/images/login/logo-login.png";
 import ParticlesAuth from "../AuthenticationInner/ParticlesAuth";
 
 const Register = () => {
@@ -73,7 +73,7 @@ const Register = () => {
 
     }, [dispatch, success, error, history]);
 
-document.title="Basic SignUp | Velzon - React Admin & Dashboard Template";
+document.title="Registro-StageUp";
 
     return (
         <React.Fragment>
@@ -84,11 +84,11 @@ document.title="Basic SignUp | Velzon - React Admin & Dashboard Template";
                             <Col lg={12}>
                                 <div className="text-center mt-sm-5 mb-4 text-white-50">
                                     <div>
-                                        <Link to="/" className="d-inline-block auth-logo">
-                                            <img src={logoLight} alt="" height="20" />
+                                        <Link to="/" className="d-inline-block">
+                                            <img src={logoLight} alt="" height="150" />
                                         </Link>
                                     </div>
-                                    <p className="mt-3 fs-15 fw-medium">Premium Admin & Dashboard Template</p>
+                                    <p className="mt-3 fs-15 fw-medium">Se registre na nossa plataforma de estagio</p>
                                 </div>
                             </Col>
                         </Row>
@@ -99,8 +99,7 @@ document.title="Basic SignUp | Velzon - React Admin & Dashboard Template";
 
                                     <CardBody className="p-4">
                                         <div className="text-center mt-2">
-                                            <h5 className="text-primary">Create New Account</h5>
-                                            <p className="text-muted">Get your free velzon account now</p>
+                                            <h5 className="text-primary">Crie uma conta</h5>
                                         </div>
                                         <div className="p-2 mt-4">
                                             <Form
@@ -132,7 +131,7 @@ document.title="Basic SignUp | Velzon - React Admin & Dashboard Template";
                                                         id="email"
                                                         name="email"
                                                         className="form-control"
-                                                        placeholder="Enter email address"
+                                                        placeholder=""
                                                         type="email"
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
@@ -151,7 +150,7 @@ document.title="Basic SignUp | Velzon - React Admin & Dashboard Template";
                                                     <Input
                                                         name="first_name"
                                                         type="text"
-                                                        placeholder="Enter username"
+                                                        placeholder=""
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
                                                         value={validation.values.first_name || ""}
@@ -166,11 +165,11 @@ document.title="Basic SignUp | Velzon - React Admin & Dashboard Template";
                                                 </div>
 
                                                 <div className="mb-2">
-                                                    <Label htmlFor="userpassword" className="form-label">Password <span className="text-danger">*</span></Label>
+                                                    <Label htmlFor="userpassword" className="form-label">Senha <span className="text-danger">*</span></Label>
                                                     <Input
                                                         name="password"
                                                         type="password"
-                                                        placeholder="Enter Password"
+                                                        placeholder=""
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
                                                         value={validation.values.password || ""}
@@ -185,11 +184,11 @@ document.title="Basic SignUp | Velzon - React Admin & Dashboard Template";
                                                 </div>
 
                                                 <div className="mb-2">
-                                                    <Label htmlFor="confirmPassword" className="form-label">Confirm Password <span className="text-danger">*</span></Label>
+                                                    <Label htmlFor="confirmPassword" className="form-label">Confirmar senha <span className="text-danger">*</span></Label>
                                                     <Input
                                                         name="confirm_password"
                                                         type="password"
-                                                        placeholder="Confirm Password"
+                                                        placeholder=""
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
                                                         value={validation.values.confirm_password || ""}
@@ -202,18 +201,18 @@ document.title="Basic SignUp | Velzon - React Admin & Dashboard Template";
                                                     ) : null}
                                                 </div>
 
-                                                <div className="mb-4">
+                                                {/* <div className="mb-4">
                                                     <p className="mb-0 fs-12 text-muted fst-italic">By registering you agree to the Velzon 
                                                     <Link to="#" className="text-primary text-decoration-underline fst-normal fw-medium">Terms of Use</Link></p>
-                                                </div>
+                                                </div> */}
 
                                                 <div className="mt-4">
-                                                    <button className="btn btn-success w-100" type="submit">Sign Up</button>
+                                                    <button className="btn btn-success w-100" type="submit">Registrar-se</button>
                                                 </div>
 
                                                 <div className="mt-4 text-center">
                                                     <div className="signin-other-title">
-                                                        <h5 className="fs-13 mb-4 title text-muted">Create account with</h5>
+                                                        <h5 className="fs-13 mb-4 title text-muted">Crie uma conta com</h5>
                                                     </div>
 
                                                     <div>
@@ -229,7 +228,7 @@ document.title="Basic SignUp | Velzon - React Admin & Dashboard Template";
                                 </Card>
 
                                 <div className="mt-4 text-center">
-                                    <p className="mb-0">Already have an account ? <Link to="/login" className="fw-semibold text-primary text-decoration-underline"> Signin </Link> </p>
+                                    <p className="mb-0">Já tem uma conta? <Link to="/login" className="fw-semibold text-primary text-decoration-underline"> Login </Link> </p>
                                 </div>
 
                             </Col>

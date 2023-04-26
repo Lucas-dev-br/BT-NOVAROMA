@@ -60,7 +60,7 @@ const crmcontacts = [
     {
         id: 4,
         contactId: "#VZ004",
-        name: "Alexis Clarke",
+        name: "Alexis Clrke",
         company: "Digitech Galaxy",
         email: "alexisclarke@velzon.com",
         phone: "515-395-1069",
@@ -167,7 +167,7 @@ const companies = [
         compnayId: "#VZ004",
         img: company1,
         companyName: "Digitech Galaxy",
-        owner: "Alexis Clarke",
+        owner: "Alexis Clrke",
         industryType: "Telecommunications Services",
         rating: "3.2",
         location: "Bogota, Colombia",

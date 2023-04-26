@@ -12,7 +12,7 @@ const Footer = () => {
                         </Col>
                         <Col sm={6}>
                             <div className="text-sm-end d-none d-sm-block">
-                                Desenvolvido pela StageUp
+                                Desenvolvido pela StageUp 
                             </div>
                         </Col>
                     </Row>

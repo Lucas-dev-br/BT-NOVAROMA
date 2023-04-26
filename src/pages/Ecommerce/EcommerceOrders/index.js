@@ -43,6 +43,9 @@ import {
   resetEcomFlag
 } from "../../../store/ecommerce/action";
 
+// DataTable
+import { TableList } from "../../Tables/DataTables/datatableCom";
+
 import Loader from "../../../Components/Common/Loader";
 import MsgToast from "../../../Components/Common/MsgToast";
 import { ToastContainer } from 'react-toastify';
@@ -94,6 +97,8 @@ const EcommerceOrders = () => {
     },
   ];
 
+
+
   const orderpayement = [
     {
       options: [
@@ -104,6 +109,165 @@ const EcommerceOrders = () => {
         { label: "Visa", value: "Visa" },
         { label: "COD", value: "COD" },
       ],
+    },
+  ];
+
+  const dataList = [
+    {
+      id: 1,
+      image: "img-1.png",
+      name: "Half Sleeve Round Neck T-Shirts",
+      category: "Clothes",
+      stock: "12",
+      price: 115,
+      orders: "48",
+      type: "published",
+      rating: 4.2,
+      publishedDate: ["12 Oct, 2021", "10:05 AM"],
+      categories: "fashion"
+    },
+    {
+      id: 2,
+      image: "img-2.png",
+      name: "Urban Ladder Pashe Chair",
+      category: "Furniture",
+      stock: "06",
+      price: 160,
+      orders: "30",
+      type: "unpublished",
+      rating: 3.3,
+      publishedDate: ["06 Jan, 2021", "01:31 PM"],
+      categories: "furniture"
+    },
+    {
+      id: 3,
+      image: "img-3.png",
+      name: "350 ml Glass Grocery Container",
+      category: "Kitchen Storage & Containers",
+      stock: "10",
+      price: 25,
+      orders: "48",
+      type: "unpublished",
+      rating: 4.5,
+      publishedDate: ["26 Mar, 2021", "11:40 AM"],
+      categories: "grocery"
+    },
+    {
+      id: 4,
+      image: "img-4.png",
+      name: "Fabric Dual Tone Living Room Chair",
+      category: "Furniture",
+      stock: "15",
+      price: 140,
+      orders: "40",
+      type: "unpublished",
+      rating: 3.2,
+      publishedDate: ["19 Apr, 2021", "02:51 PM"],
+      categories: "furniture"
+    },
+    {
+      id: 5,
+      image: "img-5.png",
+      name: "Crux Motorsports Helmet",
+      category: "Bike Accessories",
+      stock: "08",
+      price: 135,
+      orders: "55",
+      type: "unpublished",
+      rating: 4.4,
+      publishedDate: ["30 Mar, 2021", "09:42 AM"],
+      categories: "auto"
+    },
+    {
+      id: 6,
+      image: "img-6.png",
+      name: "Half Sleeve T-Shirts (Blue)",
+      category: "Clothes",
+      stock: "15",
+      price: 125,
+      orders: "48",
+      type: "unpublished",
+      rating: 3.2,
+      publishedDate: ["12 Oct, 2021", "04:55 PM"],
+      categories: "fashion"
+    },
+    {
+      id: 7,
+      image: "img-7.png",
+      name: "Noise Evolve Smartwatch",
+      category: "Watches",
+      stock: "12",
+      price: 95,
+      orders: "45",
+      type: "published",
+      rating: 4.3,
+      publishedDate: ["15 May, 2021", "03:40 PM"],
+      categories: "watches"
+    },
+    {
+      id: 8,
+      image: "img-8.png",
+      name: "Sweatshirt for Men (Pink)",
+      category: "Clothes",
+      stock: "20",
+      price: 120,
+      orders: "48",
+      type: "published",
+      rating: 2.2,
+      publishedDate: ["21 Jun, 2021", "12:18 PM"],
+      categories: "fashion"
+    },
+    {
+      id: 9,
+      image: "img-9.png",
+      name: "Reusable Ecological Coffee Cup",
+      category: "Tableware & Dinnerware",
+      stock: "14",
+      price: 125,
+      orders: "55",
+      type: "published",
+      rating: 2.3,
+      publishedDate: ["15 Jan, 2021", "10:29 AM"],
+      categories: "grocery"
+    },
+    {
+      id: 10,
+      image: "img-10.png",
+      name: "Travel Carrying Pouch Bag",
+      category: "Bags, Wallets and Luggage",
+      stock: "20",
+      price: 115,
+      orders: "60",
+      type: "published",
+      rating: 2.3,
+      publishedDate: ["15 Jun, 2021", "03:51 Pm"],
+      categories: "kids"
+    },
+    {
+      id: 11,
+      image: "img-1.png",
+      name: "Half Sleeve Round Neck T-Shirts",
+      category: "Clothes",
+      stock: "12",
+      price: 115,
+      orders: "48",
+      type: "published",
+      rating: 4.2,
+      publishedDate: ["12 Oct, 2021", "10:05 AM"],
+      categories: "fashion"
+    },
+    {
+      id: 12,
+      image: "img-2.png",
+      name: "Urban Ladder Pashe Chair",
+      category: "Furniture",
+      stock: "06",
+      price: 160,
+      orders: "30",
+      type: "published",
+      rating: 4.3,
+      publishedDate: ["06 Jan, 2021", "01:31 PM"],
+      categories: "furniture"
     },
   ];
 
@@ -322,32 +486,20 @@ const EcommerceOrders = () => {
   // Customber Column
   const columns = useMemo(
     () => [
+    
       {
-        Header: "#",
-        Cell: () => {
-          return <input type="checkbox" />;
-        },
-      },
-      {
-        Header: "Order Id",
-        accessor: "orderId",
-        filterable: false,
-        Cell: (cell) => {
-          return <Link to="/apps-ecommerce-order-details" className="fw-medium link-primary">{cell.value}</Link>;
-        },
-      },
-      {
-        Header: "Customer",
+        Header: "Empresa",
         accessor: "customer",
         filterable: false,
       },
       {
-        Header: "Product",
+        Header: "Vaga",
         accessor: "product",
         filterable: false,
+        
       },
       {
-        Header: "Order Date",
+        Header: "Data",
         accessor: "orderDate",
         Cell: (order) => (
           <>
@@ -357,17 +509,7 @@ const EcommerceOrders = () => {
         ),
       },
       {
-        Header: "Amount",
-        accessor: "amount",
-        filterable: false,
-      },
-      {
-        Header: "Payment Method",
-        accessor: "payment",
-        filterable: false,
-      },
-      {
-        Header: 'Delivery Status',
+        Header: 'Status',
         accessor: 'status',
         Cell: (cell) => {
           switch (cell.value) {
@@ -390,7 +532,7 @@ const EcommerceOrders = () => {
       },
 
       {
-        Header: "Action",
+        accessor: "action",
         Cell: (cellProps) => {
           return (
             <ul className="list-inline hstack gap-2 mb-0">
@@ -496,7 +638,524 @@ const EcommerceOrders = () => {
             <Card id="orderList">
               <CardHeader className="card-header border-0">
                 <div className="d-flex align-items-center">
-                  <h5 className="card-title mb-0 flex-grow-1">Order History</h5>
+                  <h5 className="card-title mb-0 flex-grow-1">Vagas</h5>
+                  <div className="flex-shrink-0">
+                    <button
+                      type="button"
+                      className="btn btn-success add-btn"
+                      id="create-btn"
+                      onClick={() => { setIsEdit(false); toggle(); }}
+                    >
+                      <i className="ri-add-line align-bottom me-1"></i> Create
+                      Order
+                    </button>{" "}
+                    <button type="button" className="btn btn-info">
+                      <i className="ri-file-download-line align-bottom me-1"></i>{" "}
+                      Import
+                    </button>
+                    {" "}
+                    <button className="btn btn-soft-danger"
+                    // onClick="deleteMultiple()"
+                    ><i
+                      className="ri-delete-bin-2-line"></i></button>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardBody className="border border-dashed border-end-0 border-start-0">
+                <form>
+                  <Row className="g-3">
+                    <Col sm={6} className="col-xxl-5">
+                      <div className="search-box">
+                        <input
+                          type="text"
+                          className="form-control search"
+                          placeholder="Search for order ID, customer, order status or something..."
+                        />
+                        <i className="ri-search-line search-icon"></i>
+                      </div>
+                    </Col>
+
+                    <Col sm={6} className="col-xxl-2">
+                      <div>
+                        <Flatpickr
+                          className="form-control"
+                          id="datepicker-publish-input"
+                          placeholder="Select a date"
+                          options={{
+                            altInput: true,
+                            altFormat: "F j, Y",
+                            mode: "multiple",
+                            dateFormat: "d.m.y",
+                          }}
+                        />
+                      </div>
+                    </Col>
+
+                    <Col sm={4} className="col-xxl-2">
+                      <div>
+                        <Select
+                          value={orderStatus}
+                          onChange={() => {
+                            handleorderStatus();
+                          }}
+                          options={orderstatus}
+                          name="choices-single-default"
+                          id="idStatus"
+                        ></Select>
+                      </div>
+                    </Col>
+
+                    <Col sm={4} className="col-xxl-2">
+                      <div>
+                        <Select
+                          value={orderPayement}
+                          onChange={() => {
+                            handleorderPayement();
+                          }}
+                          options={orderpayement}
+                          name="choices-payment-default"
+                          id="idPayment"
+                        ></Select>
+                      </div>
+                    </Col>
+
+                    <Col sm={4} className="col-xxl-1">
+                      <div>
+                        <button type="button" className="btn btn-primary w-100">
+                          {" "}
+                          <i className="ri-equalizer-fill me-1 align-bottom"></i>
+                          Filters
+                        </button>
+                      </div>
+                    </Col>
+                  </Row>
+                </form>
+              </CardBody>
+              <CardBody className="pt-0">
+                <div>
+                  <Nav
+                    className="nav-tabs nav-tabs-custom nav-success mb-3"
+                    role="tablist"
+                  >
+                    <NavItem>
+                      <NavLink
+                        className={classnames(
+                          { active: activeTab === "1" },
+                          "fw-semibold"
+                        )}
+                        onClick={() => {
+                          toggleTab("1", "all");
+                        }}
+                        href="#"
+                      >
+                        <i className="ri-store-2-fill me-1 align-bottom"></i>{" "}
+                        All Orders
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink
+                        className={classnames(
+                          { active: activeTab === "2" },
+                          "fw-semibold"
+                        )}
+                        onClick={() => {
+                          toggleTab("2", "Delivered");
+                        }}
+                        href="#"
+                      >
+                        <i className="ri-checkbox-circle-line me-1 align-bottom"></i>{" "}
+                        Delivered
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink
+                        className={classnames(
+                          { active: activeTab === "3" },
+                          "fw-semibold"
+                        )}
+                        onClick={() => {
+                          toggleTab("3", "Pickups");
+                        }}
+                        href="#"
+                      >
+                        <i className="ri-truck-line me-1 align-bottom"></i>{" "}
+                        Pickups{" "}
+                        <span className="badge bg-danger align-middle ms-1">
+                          2
+                        </span>
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink
+                        className={classnames(
+                          { active: activeTab === "4" },
+                          "fw-semibold"
+                        )}
+                        onClick={() => {
+                          toggleTab("4", "Returns");
+                        }}
+                        href="#"
+                      >
+                        <i className="ri-arrow-left-right-fill me-1 align-bottom"></i>{" "}
+                        Returns
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink
+                        className={classnames(
+                          { active: activeTab === "5" },
+                          "fw-semibold"
+                        )}
+                        onClick={() => {
+                          toggleTab("5", "Cancelled");
+                        }}
+                        href="#"
+                      >
+                        <i className="ri-close-circle-line me-1 align-bottom"></i>{" "}
+                        Cancelled
+                      </NavLink>
+                    </NavItem>
+                  </Nav>
+
+                  {/* {isOrderSuccess && orderList.length ? (
+                    <TableContainer
+                      columns={columns}
+                      data={(orderList || [])}
+                      isGlobalFilter={false}
+                      isAddUserList={false}
+                      customPageSize={8}
+                      divClass="table-responsive table-card mb-1"
+                      tableClass="align-middle table-nowrap"
+                      theadClass="table-light text-muted text-uppercase"
+                      handleOrderClick={handleOrderClicks}
+                    />
+                  ) : (<Loader error={error} />)
+                  } */}
+
+                  {isOrderSuccess && orderList.length ? (
+                    <TableList
+                      columns={columns}
+                      data={(orderList || [])}
+                      isGlobalFilter={false}
+                      isAddUserList={false}
+                      customPageSize={8}
+                      divClass="table-responsive table-card mb-1"
+                      tableClass="align-middle table-nowrap"
+                      theadClass="table-light text-muted text-uppercase"
+                      handleOrderClick={handleOrderClicks}
+                    />
+                  ) : (<Loader error={error} />)
+                  }
+
+
+                </div>
+                <Modal id="showModal" isOpen={modal} toggle={toggle} centered>
+                  <ModalHeader className="bg-light p-3" toggle={toggle}>
+                    {!!isEdit ? "Edit Order" : "Add Order"}
+                  </ModalHeader>
+                  <Form onSubmit={(e) => {
+                    e.preventDefault();
+                    validation.handleSubmit();
+                    return false;
+                  }}>
+                    <ModalBody>
+                      <input type="hidden" id="id-field" />
+
+                      <div className="mb-3">
+                        <Label
+                          htmlFor="id-field"
+                          className="form-label"
+                        >
+                          Order Id
+                        </Label>
+                        <Input
+                          name="orderId"
+                          id="id-field"
+                          className="form-control"
+                          placeholder="Enter Order Id"
+                          type="text"
+                          validate={{
+                            required: { value: true },
+                          }}
+                          onChange={validation.handleChange}
+                          onBlur={validation.handleBlur}
+                          value={validation.values.orderId || ""}
+                          invalid={
+                            validation.touched.orderId && validation.errors.orderId ? true : false
+                          }
+                        />
+                        {validation.touched.orderId && validation.errors.orderId ? (
+                          <FormFeedback type="invalid">{validation.errors.orderId}</FormFeedback>
+                        ) : null}
+
+                      </div>
+
+                      <div className="mb-3">
+                        <Label
+                          htmlFor="customername-field"
+                          className="form-label"
+                        >
+                          Customer Name
+                        </Label>
+                        <Input
+                          name="customer"
+                          id="customername-field"
+                          className="form-control"
+                          placeholder="Enter Name"
+                          type="text"
+                          validate={{
+                            required: { value: true },
+                          }}
+                          onChange={validation.handleChange}
+                          onBlur={validation.handleBlur}
+                          value={validation.values.customer || ""}
+                          invalid={
+                            validation.touched.customer && validation.errors.customer ? true : false
+                          }
+                        />
+                        {validation.touched.customer && validation.errors.customer ? (
+                          <FormFeedback type="invalid">{validation.errors.customer}</FormFeedback>
+                        ) : null}
+
+                      </div>
+
+                      <div className="mb-3">
+                        <Label
+                          htmlFor="productname-field"
+                          className="form-label"
+                        >
+                          Product
+                        </Label>
+
+                        <Input
+                          name="product"
+                          type="select"
+                          className="form-select"
+                          onChange={validation.handleChange}
+                          onBlur={validation.handleBlur}
+                          value={
+                            validation.values.product || ""
+                          }
+                        >
+                          {productname.map((item, key) => (
+                            <React.Fragment key={key}>
+                              {item.options.map((item, key) => (<option value={item.value} key={key}>{item.label}</option>))}
+                            </React.Fragment>
+                          ))}
+                        </Input>
+                        {validation.touched.product &&
+                          validation.errors.product ? (
+                          <FormFeedback type="invalid">
+                            {validation.errors.product}
+                          </FormFeedback>
+                        ) : null}
+                      </div>
+
+                      <div className="mb-3">
+                        <Label htmlFor="date-field" className="form-label">
+                          Order Date
+                        </Label>
+
+                        <Flatpickr
+                          name="orderDate"
+                          // type="date"
+                          className="form-control"
+                          id="datepicker-publish-input"
+                          placeholder="Select a date"
+                          options={{
+                            enableTime: true,
+                            altInput: true,
+                            altFormat: "d M, Y, G:i K",
+                            dateFormat: "d M, Y, G:i K",
+                          }}
+                          onChange={(e) =>
+                            dateformate(e)
+                          }
+                          value={validation.values.orderDate || ""}
+                        />
+
+                        {/* <Input
+                          name="orderDate"
+                          type="date"
+                          id="date-field"
+                          onChange={validation.handleChange}
+                          onBlur={validation.handleBlur}
+                          value={validation.values.orderDate || ""}
+                          invalid={
+                            validation.touched.orderDate && validation.errors.orderDate ? true : false
+                          }
+                        /> */}
+
+                        {validation.touched.orderDate && validation.errors.orderDate ? (
+                          <FormFeedback type="invalid">{validation.errors.orderDate}</FormFeedback>
+                        ) : null}
+                      </div>
+
+                      {/* <div className="mb-3">
+                        <Label htmlFor="date-field" className="form-label">
+                          Order Time
+                        </Label>
+
+                        <Input
+                          name="ordertime"
+                          type="time"
+                          onChange={validation.handleChange}
+                          onBlur={validation.handleBlur}
+                          value={validation.values.ordertime || ""}
+                          invalid={
+                            validation.touched.ordertime && validation.errors.ordertime ? true : false
+                          }
+                        />
+
+                        {validation.touched.ordertime && validation.errors.ordertime ? (
+                          <FormFeedback type="invalid">{validation.errors.ordertime}</FormFeedback>
+                        ) : null}
+                      </div> */}
+
+                      <div className="row gy-4 mb-3">
+                        <div className="col-md-6">
+                          <div>
+                            <Label
+                              htmlFor="amount-field"
+                              className="form-label"
+                            >
+                              Amount
+                            </Label>
+                            <Input
+                              name="amount"
+                              type="text"
+                              onChange={validation.handleChange}
+                              onBlur={validation.handleBlur}
+                              value={validation.values.amount || ""}
+                              invalid={
+                                validation.touched.amount && validation.errors.amount ? true : false
+                              }
+                            />
+                            {validation.touched.amount && validation.errors.amount ? (
+                              <FormFeedback type="invalid">{validation.errors.amount}</FormFeedback>
+                            ) : null}
+
+                          </div>
+                        </div>
+                        <div className="col-md-6">
+                          <div>
+                            <Label
+                              htmlFor="payment-field"
+                              className="form-label"
+                            >
+                              Payment Method
+                            </Label>
+
+                            <Input
+                              name="payment"
+                              type="select"
+                              className="form-select"
+                              onChange={validation.handleChange}
+                              onBlur={validation.handleBlur}
+                              value={
+                                validation.values.payment || ""
+                              }
+                            >
+                              {orderpayement.map((item, key) => (
+                                <React.Fragment key={key}>
+                                  {item.options.map((item, key) => (<option value={item.value} key={key}>{item.label}</option>))}
+                                </React.Fragment>
+                              ))}
+                            </Input>
+                            {validation.touched.payment &&
+                              validation.errors.payment ? (
+                              <FormFeedback type="invalid">
+                                {validation.errors.payment}
+                              </FormFeedback>
+                            ) : null}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <Label
+                          htmlFor="delivered-status"
+                          className="form-label"
+                        >
+                          Delivery Status
+                        </Label>
+
+                        <Input
+                          name="status"
+                          type="select"
+                          className="form-select"
+                          onChange={validation.handleChange}
+                          onBlur={validation.handleBlur}
+                          value={
+                            validation.values.status || ""
+                          }
+                        >
+                          {orderstatus.map((item, key) => (
+                            <React.Fragment key={key}>
+                              {item.options.map((item, key) => (<option value={item.value} key={key}>{item.label}</option>))}
+                            </React.Fragment>
+                          ))}
+                        </Input>
+                        {validation.touched.status &&
+                          validation.errors.status ? (
+                          <FormFeedback type="invalid">
+                            {validation.errors.status}
+                          </FormFeedback>
+                        ) : null}
+
+                      </div>
+                    </ModalBody>
+                    <div className="modal-footer">
+                      <div className="hstack gap-2 justify-content-end">
+                        <button
+                          type="button"
+                          className="btn btn-light"
+                          onClick={() => {
+                            setModal(false);
+                          }}
+                        >
+                          Close
+                        </button>
+
+                        <button type="submit" className="btn btn-success">
+                          {!!isEdit
+                            ? "Update"
+                            : "Add Customer"}
+                        </button>
+                      </div>
+                    </div>
+                  </Form>
+                </Modal>
+                {isOrderAdd ? <MsgToast msg="Order Added Successfully" color="success" icon="ri-checkbox-circle-line" /> : null}
+                {isOrderAddFail ? <MsgToast msg="Order Added Failed" color="danger" icon="ri-error-warning-line" /> : null}
+                {isOrderDelete ? <MsgToast msg="Order Deleted Successfully" color="success" icon="ri-checkbox-circle-line" /> : null}
+                {isOrderDeleteFail ? <MsgToast msg="Order Deleted Failed" color="danger" icon="ri-error-warning-line" /> : null}
+                {isOrderUpdate ? <MsgToast msg="Order Updated Successfully" color="success" icon="ri-checkbox-circle-line" /> : null}
+                {isOrderUpdateFail ? <MsgToast msg="Order Updated Failed" color="danger" icon="ri-error-warning-line" /> : null}
+                <ToastContainer limit={1} closeButton={false} />
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
+  return (
+    <div className="page-content">
+      <DeleteModal
+        show={deleteModal}
+        onDeleteClick={handleDeleteOrder}
+        onCloseClick={() => setDeleteModal(false)}
+      />
+      <Container fluid>
+
+        <BreadCrumb title="Orders" pageTitle="Ecommerce" />
+        <Row>
+          <Col lg={12}>
+            <Card id="orderList">
+              <CardHeader className="card-header border-0">
+                <div className="d-flex align-items-center">
+                  <h5 className="card-title mb-0 flex-grow-1">Vagas</h5>
                   <div className="flex-shrink-0">
                     <button
                       type="button"
