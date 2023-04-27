@@ -30,6 +30,12 @@ import fil from "../../../assets/images/svg/crypto-icons/fil.svg";
 import aave from "../../../assets/images/svg/crypto-icons/aave.svg";
 import ada from "../../../assets/images/svg/crypto-icons/ada.svg";
 
+import Company1 from "../../../assets/images/users/AVATAR1.jpg";
+import Company2 from "../../../assets/images/users/AVATAR2.jpg";
+import Company3 from "../../../assets/images/users/AVATAR3.jpg";
+import Company4 from "../../../assets/images/users/AVATAR4.jpg";
+import Company5 from "../../../assets/images/users/AVATAR5.png";
+
 const BasicTable = () => {
   const columns = [
     {
@@ -181,7 +187,7 @@ const BasicTable = () => {
   const data = [
     {
       srNo: "01",
-      assigned: [avatar3],
+      assigned: [Company1],
       id: "VLZ-452",
       purchaseId: "VLZ1400087402",
       title: "Post launch reminder/ post list",
@@ -194,7 +200,7 @@ const BasicTable = () => {
     {
       srNo: "02",
       id: "VLZ-453",
-      assigned: [avatar3],
+      assigned: [Company2],
 
       purchaseId: "VLZ1400087425",
       title: "Additional Calendar",
@@ -207,7 +213,7 @@ const BasicTable = () => {
     {
       srNo: "03",
       id: "VLZ-454",
-      assigned: [avatar3],
+      assigned: [Company3],
 
       purchaseId: "VLZ1400087438",
       title: "Make a creating an account profile",
@@ -220,7 +226,7 @@ const BasicTable = () => {
     {
       srNo: "04",
       id: "VLZ-455",
-      assigned: [avatar3],
+      assigned: [Company4],
 
       purchaseId: "VLZ1400087748",
       title: "Apologize for shopping Error!",
@@ -233,7 +239,7 @@ const BasicTable = () => {
     {
       srNo: "05",
       id: "VLZ-456",
-      assigned: [avatar3],
+      assigned: [Company5],
 
       purchaseId: "VLZ1400087547",
       title: "Support for theme",
@@ -246,7 +252,7 @@ const BasicTable = () => {
     {
       srNo: "06",
       id: "VLZ-457",
-      assigned: [avatar3],
+      assigned: [Company1],
 
       purchaseId: "VLZ1400087245",
       title: "Benner design for FB & Twitter",
@@ -259,7 +265,7 @@ const BasicTable = () => {
     {
       srNo: "07",
       id: "VLZ-458",
-      assigned: [avatar3],
+      assigned: [Company3],
 
       purchaseId: "VLZ1400087785",
       title: "Change email option process",
@@ -272,7 +278,7 @@ const BasicTable = () => {
     {
       srNo: "08",
       id: "VLZ-460",
-      assigned: [avatar3],
+      assigned: [Company1],
 
       purchaseId: "VLZ1400087745",
       title: "Support for theme",
@@ -285,7 +291,7 @@ const BasicTable = () => {
     {
       srNo: "09",
       id: "VLZ-461",
-      assigned: [avatar3],
+      assigned: [Company4],
 
       purchaseId: "VLZ1400087179",
       title: "Form submit issue",
@@ -298,7 +304,7 @@ const BasicTable = () => {
     {
       srNo: "10",
       id: "VLZ-462",
-      assigned: [avatar3],
+      assigned: [Company1],
 
       purchaseId: "VLZ140008856",
       title: "Edit customer testimonial",
@@ -312,6 +318,22 @@ const BasicTable = () => {
   return <DataTable columns={columns} data={data} pagination />;
 };
 const TableList = () => {
+  // Css da tabela
+  const customStyles = {
+    rows: {
+      style: {
+        paddingTop: "16px",
+        paddingBottom: "16px",
+      },
+    },
+
+    cells: {
+      style: {
+        fontSize: "16px",
+      },
+    },
+  };
+
   const columns = [
     {
       name: "Empresa",
@@ -327,7 +349,7 @@ const TableList = () => {
                     alt=""
                     className="avatar-xs rounded-circle me-2"
                   />
-                  <span style={{ color: "black" }}>{cell.user}</span>
+                  <span style={{ color: "black" }}>{cell.name}</span>
                 </Link>
               ))}
             </div>
@@ -338,7 +360,7 @@ const TableList = () => {
 
     {
       name: <span className="font-weight-bold fs-13">Vaga</span>,
-      selector: (row) => row.createdBy,
+      selector: (row) => row.vaga,
       sortable: true,
     },
     {
@@ -352,11 +374,11 @@ const TableList = () => {
       sortable: true,
       selector: (cell) => {
         switch (cell.priority) {
-          case "High":
+          case "Encerrado":
             return <span className="badge bg-danger"> {cell.priority} </span>;
-          case "Medium":
-            return <span className="badge bg-info"> {cell.priority} </span>;
-          case "Low":
+          case "Pendente":
+            return <span className="badge bg-warning"> {cell.priority} </span>;
+          case "Aberto":
             return <span className="badge bg-success"> {cell.priority} </span>;
           default:
             return <span className="badge bg-danger"> {cell.priority} </span>;
@@ -378,136 +400,135 @@ const TableList = () => {
 
   const data = [
     {
-      srNo: "01",
-      id: "VLZ-452",
+      id: "01",
       purchaseId: "VLZ1400087402",
       title: "Post launch reminder/ post list",
-      user: "Joseph Parker",
-      assigned: [avatar3],
+      name: "Adasi Software",
+      assigned: [Company1],
 
-      createdBy: "Joseph Parker",
-      createDate: "03 Oct, 2021",
+      vaga: "Front-end Developer",
+      createDate: "03/08/2022",
       status: "Re-open",
-      priority: "High",
+      priority: "Encerrado",
     },
     {
-      srNo: "02",
-      id: "VLZ-453",
+      id: "02",
       purchaseId: "VLZ1400087425",
       title: "Additional Calendar",
-      user: "Diana Kohler",
-      assigned: [avatar3],
+      name: "Unimed",
+      assigned: [Company2],
 
-      createdBy: "Mary Rucker",
-      createDate: "05 Oct, 2021",
+      vaga: "Estagiario de fisioterapia",
+      createDate: "05/08/2022",
       status: "On-Hold",
-      priority: "Medium",
+      priority: "Pendente",
     },
     {
-      srNo: "03",
-      id: "VLZ-454",
+      id: "03",
       purchaseId: "VLZ1400087438",
       title: "Make a creating an account profile",
-      user: "Tonya Noble",
-      assigned: [avatar3],
+      name: "Colmeia",
+      assigned: [Company3],
 
-      createdBy: "Tonya Noble",
-      createDate: "27 April, 2022",
+      vaga: "Estagiario de gerente de projetos",
+      createDate: "27/05/2022",
       status: "Closed",
-      priority: "Low",
+      priority: "Aberto",
     },
     {
-      srNo: "04",
-      id: "VLZ-455",
+      id: "04",
       purchaseId: "VLZ1400087748",
       title: "Apologize for shopping Error!",
-      user: "Joseph Parker",
-      assigned: [avatar3],
+      name: "Navit",
+      assigned: [Company4],
 
-      createdBy: "Joseph Parker",
-      createDate: "14 June, 2021",
+      vaga: "Estagiario de design",
+      createDate: "14/06/2021",
       status: "Inprogress",
-      priority: "Medium",
+      priority: "Pendente",
     },
     {
-      srNo: "05",
-      id: "VLZ-456",
+      id: "05",
       purchaseId: "VLZ1400087547",
       title: "Support for theme",
-      user: "Donald Palmer",
-      assigned: [avatar3],
+      name: "SoftMakers",
+      assigned: [Company5],
 
-      createdBy: "Donald Palmer",
-      createDate: "25 June, 2021",
+      vaga: "Estagiario Full-stack III",
+      createDate: "25/05/2021",
       status: "Closed",
-      priority: "Low",
+      priority: "Aberto",
     },
     {
-      srNo: "06",
-      id: "VLZ-457",
+      id: "06",
       purchaseId: "VLZ1400087245",
       title: "Benner design for FB & Twitter",
-      user: "Mary Rucker",
-      assigned: [avatar3],
+      name: "Drogasil",
+      assigned: [Company2],
 
-      createdBy: "Mary Rucker",
-      createDate: "14 Aug, 2021",
+      vaga: "Estagiario de Farmacia",
+
+      createDate: "14/08/2023",
       status: "Inprogress",
-      priority: "Medium",
+      priority: "Aberto",
     },
     {
-      srNo: "07",
-      id: "VLZ-458",
+      id: "07",
       purchaseId: "VLZ1400087785",
       title: "Change email option process",
-      user: "James Morris",
-      assigned: [avatar3],
+      name: "Adasi Software",
+      assigned: [Company1],
 
-      createdBy: "James Morris",
-      createDate: "12 March, 2022",
+      vaga: "Estagiario de gestão",
+      createDate: "12/06/2022",
       status: "Open",
-      priority: "High",
+      priority: "Encerrado",
     },
     {
-      srNo: "08",
-      id: "VLZ-460",
+      id: "08",
       purchaseId: "VLZ1400087745",
       title: "Support for theme",
-      user: "Nathan Cole",
-      assigned: [avatar2],
-      createdBy: "Nathan Cole",
-      createDate: "28 Feb, 2022",
+      name: "Faculdade Nova Roma",
+      assigned: [Company5],
+      vaga: "Suporte de TI",
+      createDate: "28/04/2022",
       status: "On-Hold",
-      priority: "Low",
+      priority: "Aberto",
     },
     {
-      srNo: "09",
-      id: "VLZ-461",
+      id: "09",
       purchaseId: "VLZ1400087179",
       title: "Form submit issue",
-      user: "Grace Coles",
-      assigned: [avatar3],
+      name: "Colmeia",
+      assigned: [Company1],
 
-      createdBy: "Grace Coles",
-      createDate: "07 Jan, 2022",
+      vaga: "Assistente de projetos",
+      createDate: "07/01/2022",
       status: "New",
-      priority: "High",
+      priority: "Pendente",
     },
     {
-      srNo: "10",
-      id: "VLZ-462",
+      id: "10",
       purchaseId: "VLZ140008856",
       title: "Edit customer testimonial",
-      user: "Freda",
-      assigned: [avatar3],
+      name: "Gym box",
+      assigned: [Company3],
 
-      createdBy: "Freda",
-      createDate: "16 Aug, 2021",
+      vaga: "Estagiario personal",
+      createDate: "16/08/2021",
       status: "Closed",
-      priority: "Medium",
+      priority: "Pendente",
     },
   ];
-  return <DataTable columns={columns} data={data} pagination />;
+  return (
+    <DataTable
+      columns={columns}
+      data={data}
+      pagination
+      title="Vagas de estagio"
+      customStyles={customStyles}
+    />
+  );
 };
 
 const ScrollVertical = () => {
