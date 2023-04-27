@@ -46,6 +46,9 @@ import {
 // DataTable
 import { TableList } from "../../Tables/DataTables/datatableCom";
 
+// images
+import logoImg from "../../../../src/assets/images/login/logo-login.png"
+
 import Loader from "../../../Components/Common/Loader";
 import MsgToast from "../../../Components/Common/MsgToast";
 import { ToastContainer } from 'react-toastify';
@@ -622,7 +625,7 @@ const EcommerceOrders = () => {
     return updateTime;
   };
 
-  document.title = "Orders | Velzon - React Admin & Dashboard Template";
+  document.title = "Vagas de estagio - StageUp";
   return (
     <div className="page-content">
       <DeleteModal
@@ -632,14 +635,14 @@ const EcommerceOrders = () => {
       />
       <Container fluid>
 
-        <BreadCrumb title="Orders" pageTitle="Ecommerce" />
+        <BreadCrumb title="Vagas" pageTitle="Vagas" />
         <Row>
           <Col lg={12}>
             <Card id="orderList">
               <CardHeader className="card-header border-0">
-                <div className="d-flex align-items-center">
-                  <h5 className="card-title mb-0 flex-grow-1">Vagas</h5>
-                  <div className="flex-shrink-0">
+                <div className="d-flex align-items-center justify-content-center">
+                  <img src={logoImg} className="card-title mb-0 d-flex justify-content-center w-25"/>
+                  {/* <div className="flex-shrink-0">
                     <button
                       type="button"
                       className="btn btn-success add-btn"
@@ -658,29 +661,29 @@ const EcommerceOrders = () => {
                     // onClick="deleteMultiple()"
                     ><i
                       className="ri-delete-bin-2-line"></i></button>
-                  </div>
+                  </div> */}
                 </div>
               </CardHeader>
               <CardBody className="border border-dashed border-end-0 border-start-0">
                 <form>
                   <Row className="g-3">
-                    <Col sm={6} className="col-xxl-5">
+                    <Col sm={4} className="col-xxl-5">
                       <div className="search-box">
                         <input
                           type="text"
                           className="form-control search"
-                          placeholder="Search for order ID, customer, order status or something..."
+                          placeholder="Procurar vaga de estagio"
                         />
                         <i className="ri-search-line search-icon"></i>
                       </div>
                     </Col>
 
-                    <Col sm={6} className="col-xxl-2">
+                    <Col sm={3} className="col-xxl-3">
                       <div>
                         <Flatpickr
                           className="form-control"
                           id="datepicker-publish-input"
-                          placeholder="Select a date"
+                          placeholder="Selecione uma data"
                           options={{
                             altInput: true,
                             altFormat: "F j, Y",
@@ -691,9 +694,10 @@ const EcommerceOrders = () => {
                       </div>
                     </Col>
 
-                    <Col sm={4} className="col-xxl-2">
+                    <Col sm={3} className="col-xxl-2">
                       <div>
                         <Select
+                          placeholder="Selecionar status"
                           value={orderStatus}
                           onChange={() => {
                             handleorderStatus();
@@ -705,21 +709,7 @@ const EcommerceOrders = () => {
                       </div>
                     </Col>
 
-                    <Col sm={4} className="col-xxl-2">
-                      <div>
-                        <Select
-                          value={orderPayement}
-                          onChange={() => {
-                            handleorderPayement();
-                          }}
-                          options={orderpayement}
-                          name="choices-payment-default"
-                          id="idPayment"
-                        ></Select>
-                      </div>
-                    </Col>
-
-                    <Col sm={4} className="col-xxl-1">
+                    <Col sm={2} className="col-xxl-1">
                       <div>
                         <button type="button" className="btn btn-primary w-100">
                           {" "}
@@ -733,7 +723,7 @@ const EcommerceOrders = () => {
               </CardBody>
               <CardBody className="pt-0">
                 <div>
-                  <Nav
+                  {/* <Nav
                     className="nav-tabs nav-tabs-custom nav-success mb-3"
                     role="tablist"
                   >
@@ -815,7 +805,7 @@ const EcommerceOrders = () => {
                         Cancelled
                       </NavLink>
                     </NavItem>
-                  </Nav>
+                  </Nav> */}
 
                   {/* {isOrderSuccess && orderList.length ? (
                     <TableContainer
@@ -961,7 +951,7 @@ const EcommerceOrders = () => {
                           // type="date"
                           className="form-control"
                           id="datepicker-publish-input"
-                          placeholder="Select a date"
+                          placeholder="Filtrar por data"
                           options={{
                             enableTime: true,
                             altInput: true,
@@ -1241,7 +1231,7 @@ const EcommerceOrders = () => {
                         <button type="button" className="btn btn-primary w-100">
                           {" "}
                           <i className="ri-equalizer-fill me-1 align-bottom"></i>
-                          Filters
+                          Filtrar
                         </button>
                       </div>
                     </Col>
